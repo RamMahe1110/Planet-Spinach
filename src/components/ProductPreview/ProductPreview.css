@@ -1,0 +1,44 @@
+.product-preview {
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  width: 60%;
+  height: 55vh;
+  margin: auto;
+  -moz-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+  -webkit-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+  box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+}
+
+.product-preview img {
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+}
+
+.add-to-basket {
+  width: 100%;
+  background: rgb(30, 192, 0);
+  opacity: 0.8;
+  height: 10%;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.explore-more {
+  width: 100%;
+  background: #000;
+  height: 10%;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.price {
+  position: absolute;
+  top: 73%;
+  left: 75%;
+  color: #eee;
+}

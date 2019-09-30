@@ -1,0 +1,32 @@
+a {
+  text-decoration: none;
+}
+
+.limited-container {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.limited-display .cat-name {
+  cursor: pointer;
+  margin: 30px auto 50px auto;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  width: 15%;
+  text-align: center;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+  -webkit-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+  box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+}
+
+.limited-items {
+  width: 100%;
+  display: flex;
+}
+
+.limited-item {
+  flex: 1;
+}

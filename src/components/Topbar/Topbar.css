@@ -1,0 +1,47 @@
+.topbar {
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  box-shadow: 1px 1px 1px 1px #333;
+  z-index: 2;
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo h5 {
+  font-size: 1vw;
+  padding-right: 10px;
+  font-family: "Leckerli One", cursive;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.items {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  width: 10%;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.item img {
+  width: 35px;
+  height: 35px;
+}
