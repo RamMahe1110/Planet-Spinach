@@ -2,9 +2,9 @@
   position: relative;
   padding: 10px;
   border-radius: 10px;
-  width: 60%;
+  width: 350px;
   height: 55vh;
-  margin: auto;
+  margin: 20px auto;
   -moz-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
   -webkit-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
   box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
@@ -41,4 +41,20 @@
   top: 73%;
   left: 75%;
   color: #eee;
+}
+
+@media screen and (max-width: 900px) {
+  .product-preview {
+    width: 350px;
+    padding: 10px;
+    margin: 10px auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .product-preview {
+    width: 350px;
+    padding: 10px;
+    margin: 20px auto;
+  }
 }

@@ -1,0 +1,84 @@
+.main {
+  position: relative;
+  height: 500px;
+}
+
+.form {
+  position: relative;
+  background: black;
+  top: 60%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 80%;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.form h1 {
+  color: #fff;
+  margin: 0 0 20px 0;
+}
+
+.form-field {
+  margin: 10px 0;
+}
+
+.form-field p {
+  color: #fff;
+  text-align: left;
+}
+
+.text-field {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin: 10px 0;
+  border: black;
+  background: rgb(69, 69, 69);
+  color: #fff;
+}
+
+.submit,
+.sign-up {
+  position: absolute;
+  background: rgb(30, 192, 0);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  bottom: 30%;
+  left: 50%;
+  width: 92%;
+  transform: translate(-50%, -50%);
+}
+
+.or {
+  position: absolute;
+  bottom: 22%;
+  color: rgb(136, 136, 136);
+  color: #ccc;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+.sign-up {
+  position: absolute;
+  background: black;
+  color: rgb(30, 192, 0);
+  width: 50%;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.underline {
+  position: absolute;
+  width: 32%;
+  bottom: 11%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: 1px solid rgb(30, 192, 0);
+}

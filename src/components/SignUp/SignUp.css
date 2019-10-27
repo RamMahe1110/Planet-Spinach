@@ -1,0 +1,84 @@
+.main-signup {
+  position: relative;
+  height: 600px;
+}
+
+.form-signup {
+  position: relative;
+  background: black;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 80%;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.form-signup h1 {
+  color: #fff;
+  margin: 0 0 20px 0;
+}
+
+.form-field-signup {
+  margin: 10px 0;
+}
+
+.form-field-signup p {
+  color: #fff;
+  text-align: left;
+}
+
+.text-field-signup {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin: 10px 0;
+  border: black;
+  background: rgb(69, 69, 69);
+  color: #fff;
+}
+
+.submit-signup,
+.signup {
+  position: absolute;
+  background: rgb(30, 192, 0);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  bottom: 26%;
+  left: 50%;
+  width: 92%;
+  transform: translate(-50%, -50%);
+}
+
+.or-signup {
+  position: absolute;
+  bottom: 20%;
+  color: rgb(136, 136, 136);
+  color: #ccc;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+.signup {
+  position: absolute;
+  background: black;
+  color: rgb(30, 192, 0);
+  width: 50%;
+  bottom: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.underline-signup {
+  position: absolute;
+  width: 38%;
+  bottom: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: 1px solid rgb(30, 192, 0);
+}

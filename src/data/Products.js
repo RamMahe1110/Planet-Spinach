@@ -4,38 +4,67 @@ const Products = [
     catName: "Healthy Carbs",
     products: [
       {
-        name: "High Protein Organic Quinoa",
+        name: "Organic High Protein Whole Eggs",
         price: {
           amount: 10,
           unit: "kg"
         },
         images: [
-          "https://images.unsplash.com/photo-1562923690-e274ba919781?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=711&q=80",
-          "https://www.bigbasket.com/media/uploads/p/l/40087526_3-fresho-brown-bread-safe-preservative-free.jpg",
-          "https://images.unsplash.com/photo-1563123571-22b8c5de3b55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80"
+          "https://images.unsplash.com/photo-1547919760-1a76e51458cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+          "https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
         ]
       },
       {
-        name: "Organic Low Gi Brown Rice",
+        name: "Boneless High Protein Chicken",
         price: {
           amount: 10,
           unit: "kg"
         },
 
         images: [
-          "https://images.unsplash.com/photo-1559603739-f9d7d50360a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80",
-          "https://brghealth.com/brg/wp-content/uploads/2015/05/Brown-rice-red-quinoa-1-e1431575919224-610x813.jpg"
+          "https://www.bigbasket.com/media/uploads/p/l/10000900_8-fresho-chicken-breast-boneless.jpg"
         ]
       },
       {
-        name: "Organic Fresh Whole Wheat Oats",
+        name: "High Protein Sea Fish",
         price: {
           amount: 10,
           unit: "kg"
         },
         images: [
-          "https://images.unsplash.com/photo-1565848920056-906a21da8c70?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80",
-          "https://images.unsplash.com/photo-1510776478953-fa4dc5de04ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=616&q=80"
+          "https://www.bigbasket.com/media/uploads/p/l/20003673_5-fresho-basa-fish-fillet.jpg"
+        ]
+      },
+      {
+        name: "Organic High Protein Whole Eggs",
+        price: {
+          amount: 10,
+          unit: "kg"
+        },
+        images: [
+          "https://images.unsplash.com/photo-1547919760-1a76e51458cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+          "https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+        ]
+      },
+      {
+        name: "Boneless High Protein Chicken",
+        price: {
+          amount: 10,
+          unit: "kg"
+        },
+
+        images: [
+          "https://www.bigbasket.com/media/uploads/p/l/10000900_8-fresho-chicken-breast-boneless.jpg"
+        ]
+      },
+      {
+        name: "High Protein Sea Fish",
+        price: {
+          amount: 10,
+          unit: "kg"
+        },
+        images: [
+          "https://www.bigbasket.com/media/uploads/p/l/20003673_5-fresho-basa-fish-fillet.jpg"
         ]
       }
     ]
@@ -44,6 +73,102 @@ const Products = [
     catId: 2,
     catName: "Animal Products",
     products: [
+      {
+        name: "Organic High Protein Whole Eggs",
+        price: {
+          amount: 10,
+          unit: "kg"
+        },
+        images: [
+          "https://images.unsplash.com/photo-1547919760-1a76e51458cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+          "https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+        ]
+      },
+      {
+        name: "Boneless High Protein Chicken",
+        price: {
+          amount: 10,
+          unit: "kg"
+        },
+
+        images: [
+          "https://www.bigbasket.com/media/uploads/p/l/10000900_8-fresho-chicken-breast-boneless.jpg"
+        ]
+      },
+      {
+        name: "High Protein Sea Fish",
+        price: {
+          amount: 10,
+          unit: "kg"
+        },
+        images: [
+          "https://www.bigbasket.com/media/uploads/p/l/20003673_5-fresho-basa-fish-fillet.jpg"
+        ]
+      },
+      {
+        name: "Organic High Protein Whole Eggs",
+        price: {
+          amount: 10,
+          unit: "kg"
+        },
+        images: [
+          "https://images.unsplash.com/photo-1547919760-1a76e51458cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+          "https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+        ]
+      },
+      {
+        name: "Boneless High Protein Chicken",
+        price: {
+          amount: 10,
+          unit: "kg"
+        },
+
+        images: [
+          "https://www.bigbasket.com/media/uploads/p/l/10000900_8-fresho-chicken-breast-boneless.jpg"
+        ]
+      },
+      {
+        name: "High Protein Sea Fish",
+        price: {
+          amount: 10,
+          unit: "kg"
+        },
+        images: [
+          "https://www.bigbasket.com/media/uploads/p/l/20003673_5-fresho-basa-fish-fillet.jpg"
+        ]
+      },
+      {
+        name: "Organic High Protein Whole Eggs",
+        price: {
+          amount: 10,
+          unit: "kg"
+        },
+        images: [
+          "https://images.unsplash.com/photo-1547919760-1a76e51458cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+          "https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+        ]
+      },
+      {
+        name: "Boneless High Protein Chicken",
+        price: {
+          amount: 10,
+          unit: "kg"
+        },
+
+        images: [
+          "https://www.bigbasket.com/media/uploads/p/l/10000900_8-fresho-chicken-breast-boneless.jpg"
+        ]
+      },
+      {
+        name: "High Protein Sea Fish",
+        price: {
+          amount: 10,
+          unit: "kg"
+        },
+        images: [
+          "https://www.bigbasket.com/media/uploads/p/l/20003673_5-fresho-basa-fish-fillet.jpg"
+        ]
+      },
       {
         name: "Organic High Protein Whole Eggs",
         price: {
@@ -274,6 +399,38 @@ const Products = [
     catId: 8,
     catName: "Plant Protein",
     products: [
+      {
+        name: "Organic High Protein Whole Eggs",
+        price: {
+          amount: 10,
+          unit: "kg"
+        },
+        images: [
+          "https://images.unsplash.com/photo-1547919760-1a76e51458cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+          "https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+        ]
+      },
+      {
+        name: "Boneless High Protein Chicken",
+        price: {
+          amount: 10,
+          unit: "kg"
+        },
+
+        images: [
+          "https://www.bigbasket.com/media/uploads/p/l/10000900_8-fresho-chicken-breast-boneless.jpg"
+        ]
+      },
+      {
+        name: "High Protein Sea Fish",
+        price: {
+          amount: 10,
+          unit: "kg"
+        },
+        images: [
+          "https://www.bigbasket.com/media/uploads/p/l/20003673_5-fresho-basa-fish-fillet.jpg"
+        ]
+      },
       {
         name: "Organic High Protein Whole Eggs",
         price: {

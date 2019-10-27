@@ -5,14 +5,14 @@ import { connect } from "react-redux";
 
 class HomePrdPreview extends Component {
   render() {
-    const { Products } = this.props.ProductReducer;
+    const { products } = this.props.ProductReducer;
     return (
       <div className="homePrdReview">
         <div>
           <div className="top-message">
             <h1>Products to make you shine</h1>
           </div>
-          <LimitedDisplay items={Products} />
+          <LimitedDisplay items={products} />
           <h3>Explore all Categories</h3>
         </div>
       </div>

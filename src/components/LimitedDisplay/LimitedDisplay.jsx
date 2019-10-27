@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./LimitedDisplay.css";
-import ProductPreview from "./../ProductPreview/ProductPreview";
 import { Link } from "react-router-dom";
+import ProductPreview from "./../ProductPreview/ProductPreview";
+import "./LimitedDisplay.css";
 
 class LimitedDisplay extends Component {
   state = {};
@@ -17,7 +17,7 @@ class LimitedDisplay extends Component {
                 </Link>
                 <div className="limited-items">
                   {item.products.map((product, i) => {
-                    if (i < 3) {
+                    if (i < 4) {
                       return (
                         <div className="limited-item" key={product.name}>
                           <ProductPreview product={product} />

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import "./Topbar.css";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import "./Topbar.css";
 
 class Topbar extends Component {
-  state = {};
   render() {
     return (
       <div className="topbar">
@@ -21,6 +21,9 @@ class Topbar extends Component {
           <Link to="/category/all" className="item">
             Category
           </Link>
+          <Link to="/auth/login" className="item">
+            Login
+          </Link>
           <div className="item">
             <img
               src={require("../../assets/logos/basket.png")}
@@ -33,4 +36,6 @@ class Topbar extends Component {
   }
 }
 
-export default Topbar;
+const mapStateToProps = state => ({});
+
+export default connect(mapStateToProps)(Topbar);
