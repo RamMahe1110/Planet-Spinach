@@ -9,10 +9,7 @@ class Topbar extends Component {
       <div className="topbar">
         <div className="logo">
           <h5>PlanetSpinach</h5>
-          <img
-            src={require("../../assets/logos/spinach-logo.png")}
-            alt="logo"
-          />
+          <img src={require("../../assets/logos/leaf.png")} alt="logo" />
         </div>
         <div className="items">
           <Link to="/" className="item">

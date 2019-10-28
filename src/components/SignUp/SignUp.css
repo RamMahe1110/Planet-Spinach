@@ -54,16 +54,6 @@
   transform: translate(-50%, -50%);
 }
 
-.or-signup {
-  position: absolute;
-  bottom: 20%;
-  color: rgb(136, 136, 136);
-  color: #ccc;
-  width: 100%;
-  transform: translate(-50%, -50%);
-  left: 50%;
-}
-
 .signup {
   position: absolute;
   background: black;
@@ -81,4 +71,35 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-bottom: 1px solid rgb(30, 192, 0);
+}
+
+@media screen and (max-width: 700px) {
+  .form-signup {
+    width: 90%;
+  }
+
+  .signup {
+    width: 80%;
+    bottom: 12%;
+  }
+
+  .underline-signup {
+    width: 50%;
+    bottom: 17%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .submit-signup {
+    bottom: 23%;
+  }
+
+  .signup {
+    bottom: 5%;
+  }
+
+  .underline-signup {
+    width: 70%;
+    bottom: 10%;
+  }
 }

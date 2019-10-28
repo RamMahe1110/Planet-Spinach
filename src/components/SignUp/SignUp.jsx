@@ -25,7 +25,7 @@ class SignUp extends Component {
             />
           </div>
           <p className="submit-signup">Sign Up</p>
-          <p className="or-signup">or</p>
+
           <Link to="/auth/login" className="signup">
             Already a member? Login
           </Link>

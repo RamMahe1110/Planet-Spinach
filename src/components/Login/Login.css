@@ -82,3 +82,18 @@
   transform: translate(-50%, -50%);
   border-bottom: 1px solid rgb(30, 192, 0);
 }
+
+@media screen and (max-width: 700px) {
+  .form {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sign-up {
+    width: 80%;
+  }
+  .underline {
+    width: 50%;
+  }
+}
