@@ -82,6 +82,7 @@ const Products = [
         },
 
         images: [
+          "https://www.bigbasket.com/media/uploads/p/l/700110565_1-lazees-chicken-chicken-breast-boneless.jpg",
           "https://www.bigbasket.com/media/uploads/p/l/10000900_8-fresho-chicken-breast-boneless.jpg"
         ]
       },
@@ -92,6 +93,8 @@ const Products = [
           unit: "kg"
         },
         images: [
+          "https://www.bigbasket.com/media/uploads/p/l/10000928_9-fresho-chicken-lollipop.jpg",
+          "https://www.bigbasket.com/media/uploads/p/l/700110577_1-lazees-chicken-chicken-drumsticks-skinless.jpg",
           "https://www.bigbasket.com/media/uploads/p/l/20003673_5-fresho-basa-fish-fillet.jpg"
         ]
       },
@@ -104,6 +107,7 @@ const Products = [
         },
 
         images: [
+          "https://www.bigbasket.com/media/uploads/p/l/40068151_1-big-sams-atlantic-salmon-portion-single.jpg",
           "https://www.bigbasket.com/media/uploads/p/l/10000900_8-fresho-chicken-breast-boneless.jpg"
         ]
       },
@@ -114,6 +118,7 @@ const Products = [
           unit: "kg"
         },
         images: [
+          "https://www.bigbasket.com/media/uploads/p/xxl/40089077_5-prasuma-pork-belly-slice.jpg",
           "https://www.bigbasket.com/media/uploads/p/l/20003673_5-fresho-basa-fish-fillet.jpg"
         ]
       },
@@ -125,6 +130,7 @@ const Products = [
         },
 
         images: [
+          "https://www.bigbasket.com/media/uploads/p/l/40125071_2-quickees-sausage-pork-cocktail.jpg",
           "https://www.bigbasket.com/media/uploads/p/l/10000900_8-fresho-chicken-breast-boneless.jpg"
         ]
       },
@@ -135,6 +141,7 @@ const Products = [
           unit: "kg"
         },
         images: [
+          "https://www.bigbasket.com/media/uploads/p/l/10000908_14-fresho-chicken-curry-cut-without-skin.jpg",
           "https://www.bigbasket.com/media/uploads/p/l/20003673_5-fresho-basa-fish-fillet.jpg"
         ]
       }

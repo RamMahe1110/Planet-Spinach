@@ -97,3 +97,24 @@
 .category-item .category-title:hover {
   z-index: 1;
 }
+
+@media screen and (max-width: 700px) {
+  .top-content-all-cat h2 {
+    font-size: 4vw;
+    line-height: 45px;
+  }
+
+  .category-item {
+    width: 50%;
+  }
+
+  .category-item .category-title {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .top-content-all-cat h2 {
+    line-height: 35px;
+  }
+}
