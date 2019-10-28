@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import AllCategory from "./../../pages/AllCategory/AllCategory";
 import SingleCategory from "../../pages/SingleCategory/SingleCategory";
-import ProductPage from "./../../pages/ProductPage/ProductPage";
+import SingleProduct from "../../pages/SingleProduct/SingleProduct";
 
 const CategoryRoutes = props => {
   console.log(props.match);
@@ -11,7 +11,7 @@ const CategoryRoutes = props => {
       <Switch>
         <Route
           path={`/category/:categoryId/:productId`}
-          component={ProductPage}
+          component={SingleProduct}
         />
         <Route exact path={`/category/all`} component={AllCategory} />
         <Route

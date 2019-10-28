@@ -1,0 +1,19 @@
+.img-and-order {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img,
+.order {
+  flex: 1;
+  padding: 25px;
+}
+
+.small-img {
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+  -webkit-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+  box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+}

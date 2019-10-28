@@ -53,6 +53,7 @@ const Products = [
     catName: "Animal Products",
     products: [
       {
+        id: 1,
         name: "Boneless High Protein Chicken",
         price: {
           amount: 10,
@@ -64,6 +65,7 @@ const Products = [
         ]
       },
       {
+        id: 2,
         name: "High Protein Sea Fish",
         price: {
           amount: 10,
@@ -75,6 +77,7 @@ const Products = [
       },
 
       {
+        id: 3,
         name: "Boneless High Protein Chicken",
         price: {
           amount: 10,
@@ -87,6 +90,7 @@ const Products = [
         ]
       },
       {
+        id: 4,
         name: "High Protein Sea Fish",
         price: {
           amount: 10,
@@ -100,6 +104,7 @@ const Products = [
       },
 
       {
+        id: 5,
         name: "Boneless High Protein Chicken",
         price: {
           amount: 10,
@@ -108,10 +113,14 @@ const Products = [
 
         images: [
           "https://www.bigbasket.com/media/uploads/p/l/40068151_1-big-sams-atlantic-salmon-portion-single.jpg",
-          "https://www.bigbasket.com/media/uploads/p/l/10000900_8-fresho-chicken-breast-boneless.jpg"
+          "https://www.bigbasket.com/media/uploads/p/l/10000900_8-fresho-chicken-breast-boneless.jpg",
+          "https://www.bigbasket.com/media/uploads/p/l/40068151_1-big-sams-atlantic-salmon-portion-single.jpg",
+          "https://www.bigbasket.com/media/uploads/p/l/10000900_8-fresho-chicken-breast-boneless.jpg",
+          "https://www.bigbasket.com/media/uploads/p/l/40068151_1-big-sams-atlantic-salmon-portion-single.jpg"
         ]
       },
       {
+        id: 6,
         name: "High Protein Sea Fish",
         price: {
           amount: 10,
@@ -123,6 +132,7 @@ const Products = [
         ]
       },
       {
+        id: 7,
         name: "Boneless High Protein Chicken",
         price: {
           amount: 10,
@@ -135,6 +145,7 @@ const Products = [
         ]
       },
       {
+        id: 8,
         name: "High Protein Sea Fish",
         price: {
           amount: 10,
