@@ -51,7 +51,27 @@ class SingleProduct extends Component {
               ))}
             </div>
           </div>
-          <div className="order"></div>
+          <div className="order">
+            <h2 className="pr-name">Product name is here</h2>
+            <h5 className="pr-price">$49.99</h5>
+            <p className="addToBasketBtn">Add To Basket</p>
+            <p className="checkoutBtn">Checkout Cart</p>
+            <ul>
+              <li className="delivery del-1">Cash on delivery available</li>
+              <li className="delivery del-2">
+                Get Product delivered within 3 to 5 days
+              </li>
+              <li className="delivery del-3">No delivery charge</li>
+              <li className="delivery del-4">
+                Get it delivered within 24 hrs by paying 10$ extra
+              </li>
+            </ul>
+            <h4>Important Note:</h4>
+            <p className="note-details">
+              You can return the product back to us if you got it damaged or
+              with broken seal
+            </p>
+          </div>
         </div>
       </div>
     );

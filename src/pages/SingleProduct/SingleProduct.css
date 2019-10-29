@@ -12,8 +12,82 @@
 .small-img {
   cursor: pointer;
   margin: 10px;
-  border-radius: 10px;
   -moz-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
   -webkit-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
   box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+}
+
+.order {
+  position: relative;
+}
+
+.pr-name {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  color: #878787;
+}
+
+.pr-price {
+  position: absolute;
+  top: 21%;
+  left: 20%;
+  color: #878787;
+}
+
+.addToBasketBtn,
+.checkoutBtn {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 40%;
+  background: rgb(30, 192, 0);
+  color: #fff;
+  padding: 20px;
+  -moz-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+  -webkit-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+  box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+}
+
+.checkoutBtn {
+  top: 43%;
+  background: #ff9f00;
+}
+
+.delivery {
+  position: absolute;
+  color: #878787;
+  text-align: justify;
+  left: 20%;
+}
+
+.del-1 {
+  top: 60%;
+}
+
+.del-2 {
+  top: 65%;
+}
+
+.del-3 {
+  top: 70%;
+}
+.del-4 {
+  top: 75%;
+}
+
+.order h4,
+.note-details {
+  position: absolute;
+  top: 83%;
+  left: 20%;
+  border-bottom: 1px solid black;
+}
+
+.note-details {
+  top: 88%;
+  border: none;
+  width: 50%;
+  text-align: justify;
+  line-height: 20px;
 }

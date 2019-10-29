@@ -15,6 +15,8 @@ class SingleCategory extends Component {
 
   render() {
     const { selectedCat } = this.props;
+    const { categoryId } = this.props.match.params;
+
     if (selectedCat === null) {
       return (
         <div className="loader-sc">
@@ -27,7 +29,11 @@ class SingleCategory extends Component {
           <h1>Showing {selectedCat.catName}</h1>
           <div className="all-products">
             {selectedCat.products.map(product => (
-              <ProductPreview product={product} />
+              <ProductPreview
+                product={product}
+                catID={categoryId}
+                productID={product.id}
+              />
             ))}
           </div>
         </div>

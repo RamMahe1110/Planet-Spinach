@@ -20,7 +20,11 @@ class LimitedDisplay extends Component {
                     if (i < 4) {
                       return (
                         <div className="limited-item" key={product.name}>
-                          <ProductPreview product={product} />
+                          <ProductPreview
+                            product={product}
+                            catID={item.catId}
+                            productID={product.id}
+                          />
                         </div>
                       );
                     }
