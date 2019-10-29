@@ -53,10 +53,10 @@ class SingleProduct extends Component {
           </div>
           <div className="order">
             <h2 className="pr-name">Product name is here</h2>
-            <h5 className="pr-price">$49.99</h5>
+            <h5 className="pr-price">$ 49.99</h5>
             <p className="addToBasketBtn">Add To Basket</p>
-            <p className="checkoutBtn">Checkout Cart</p>
-            <ul>
+            <p className="checkoutBtn">Checkout Basket</p>
+            <ul className="all-del-notes">
               <li className="delivery del-1">Cash on delivery available</li>
               <li className="delivery del-2">
                 Get Product delivered within 3 to 5 days
@@ -71,6 +71,43 @@ class SingleProduct extends Component {
               You can return the product back to us if you got it damaged or
               with broken seal
             </p>
+          </div>
+        </div>
+        <div className="small-guide">
+          Scroll down for more info{" "}
+          <img src={require("../../assets/logos/down.png")} alt="down" />
+        </div>
+        <div className="desc">
+          <h2>Description</h2>
+          <div className="desc-par1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ut
+            animi consectetur. Non, maiores minima. Quae repellendus a libero
+            illo enim voluptates? Maxime laboriosam perferendis doloremque nam,
+            libero quo, qui a molestias, fuga fugit perspiciatis deserunt totam.
+            Corporis.
+          </div>
+          <div className="desc-par2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ut
+            animi consectetur. Non, maiores minima. Quae repellendus a libero
+            illo enim voluptates? Maxime laboriosam perferendis doloremque nam,
+            libero placeat voluptatum. Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. A voluptatem iusto dolore ducimus quae? Soluta
+            facere ab error, esse eligendi, in, dignissimos tempora officiis
+            quaerat, nemo maxime magnam, va ad temporibus placeat minima non
+            necessitatibus quo, qui a molestias, fuga fugit perspiciatis
+            deserunt totam. Corporis.
+          </div>
+          <div className="desc-par3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ut
+            animi consectetur. Non, maiores minima. Quae repellendus a libero
+            illo enim voluptates? Maxime laboriosam perferendis doloremque nam,
+            libero placeat voluptatum. Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. A voluptatem iusto dolore ducimus quae? Soluta
+            facere ab error, esse eligendi, in, dignissimos tempora officiis
+            quaerat molestias maiores eveniet totam possimus? Expedita esse
+            veritatis, nemo maxime magnam, va ad temporibus placeat minima non
+            necessitatibus quo, qui a molestias, fuga fugit perspiciatis
+            deserunt totam. Corporis.
           </div>
         </div>
       </div>

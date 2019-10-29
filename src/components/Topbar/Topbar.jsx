@@ -40,7 +40,7 @@ class Topbar extends Component {
           <div className="items-dropdown">
             <div onClick={this.onDropdownClick} className="item dropdown">
               <img
-                src={require("../../assets/logos/dropdown.svg")}
+                src={require("../../assets/logos/dropdown.png")}
                 alt="dropdown"
                 width="20px"
                 height="20px"
