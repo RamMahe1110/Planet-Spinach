@@ -1,11 +1,33 @@
 import React, { Component } from "react";
-import "./HomePrdPreview.css";
+import {
+  getLimitedProducts,
+  setProductsToNull
+} from "./../../redux/Product/ProductActions";
 import LimitedDisplay from "./../LimitedDisplay/LimitedDisplay";
+import Loader from "./../Loader/Loader";
 import { connect } from "react-redux";
+import "./HomePrdPreview.css";
 
 class HomePrdPreview extends Component {
+  componentDidMount() {
+    const data = {
+      categories: ["Healthy Carbs", "Animal Products", "Plant Protein"],
+      limit: 3
+    };
+    this.props.getLimitedProducts(data);
+  }
+
+  componentWillUnmount() {
+    this.props.setProductsToNull();
+  }
+
   render() {
     const { products } = this.props.ProductReducer;
+
+    if (products === null) {
+      return <Loader />;
+    }
+
     return (
       <div className="homePrdReview">
         <div>
@@ -24,4 +46,7 @@ const mapStateToProps = state => ({
   ProductReducer: state.ProductReducer
 });
 
-export default connect(mapStateToProps)(HomePrdPreview);
+export default connect(
+  mapStateToProps,
+  { getLimitedProducts, setProductsToNull }
+)(HomePrdPreview);

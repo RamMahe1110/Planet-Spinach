@@ -17,6 +17,12 @@
   box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
 }
 
+.curr-small-img {
+  -moz-box-shadow: 0 0 5px #ff9f00;
+  -webkit-box-shadow: 0 0 5px #ff9f00;
+  box-shadow: 0 0 5px #ff9f00;
+}
+
 .order {
   position: relative;
 }

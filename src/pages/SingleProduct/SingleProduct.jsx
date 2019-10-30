@@ -43,7 +43,9 @@ class SingleProduct extends Component {
               {selectedProduct.images.map((img, i) => (
                 <img
                   onClick={() => this.onImageClick(i)}
-                  className="small-img"
+                  className={`small-img ${
+                    this.state.currentImg == i ? `curr-small-img` : ``
+                  }`}
                   src={img}
                   width="100px"
                   height="auto"

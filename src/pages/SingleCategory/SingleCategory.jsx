@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { onCategoryRequest } from "./../../redux/Product/ProductActions";
+import {
+  onCategoryRequest,
+  setCategoryToNull
+} from "./../../redux/Product/ProductActions";
 import Loader from "../../components/Loader/Loader";
 import "./SingleCategory.css";
 import ProductPreview from "../../components/ProductPreview/ProductPreview";
@@ -11,7 +14,9 @@ class SingleCategory extends Component {
     this.props.onCategoryRequest(categoryId);
   }
 
-  componentWillUnmount() {}
+  componentWillUnmount() {
+    this.props.setCategoryToNull();
+  }
 
   render() {
     const { selectedCat } = this.props;
@@ -48,5 +53,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { onCategoryRequest }
+  { onCategoryRequest, setCategoryToNull }
 )(SingleCategory);

@@ -69,13 +69,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  color: #eee;
+  color: rgb(109, 109, 109);
   font-size: 2vw;
+  z-index: 2;
 }
 
 .category-item:hover {
-  border: 1px solid #fff;
-  z-index: 1;
+  background: rgb(30, 192, 0);
+  z-index: 20;
 }
 
 .category-item .category-title:hover {
@@ -94,6 +95,10 @@
   box-shadow: inset 0 0 200px rgba(0, 0, 0);
 }
 
+.category-item::after:hover {
+  display: none;
+}
+
 .category-item .category-title:hover {
   z-index: 1;
 }
@@ -106,6 +111,7 @@
 
   .category-item {
     width: 50%;
+    height: 200px;
   }
 
   .category-item .category-title {
