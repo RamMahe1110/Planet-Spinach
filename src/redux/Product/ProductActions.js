@@ -30,10 +30,16 @@ export const setCategoryToNull = () => ({
   type: "SET-CATEGORY-TO-NULL"
 });
 
-export const onProductRequest = details => ({
-  type: "ON-SINGLE-PRODUCT-SELECT",
-  data: details
-});
+export const onProductRequest = (catID, productID) => dispatch => {
+  axios
+    .post(`http://localhost:5000/product/category/${catID}/${productID}`)
+    .then(res =>
+      dispatch({
+        type: "ON-SINGLE-PRODUCT-SELECT",
+        data: res.data
+      })
+    );
+};
 
 export const setSingleProductToNull = () => ({
   type: "SET-SINGLE-PRODUCT-TO-NULL"

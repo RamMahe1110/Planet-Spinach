@@ -1,6 +1,3 @@
-import Products from "../../data/Products";
-import { getCurrentProduct } from "./ProductFunction";
-
 const initialState = {
   allCatList: null,
   products: null,
@@ -31,7 +28,7 @@ const ProductReducer = (state = initialState, action) => {
     case "ON-SINGLE-PRODUCT-SELECT":
       return {
         ...state,
-        selectedProduct: getCurrentProduct(action.data, Products)
+        selectedProduct: action.data
       };
 
     case "SET-ALL-CATLIST-TO-NULL":

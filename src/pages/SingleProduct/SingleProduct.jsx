@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import "./SingleProduct.css";
-import { onProductRequest } from "./../../redux/Product/ProductActions";
+import {
+  onProductRequest,
+  setSingleProductToNull
+} from "./../../redux/Product/ProductActions";
 import Loader from "./../../components/Loader/Loader";
 import { connect } from "react-redux";
 
@@ -16,7 +19,11 @@ class SingleProduct extends Component {
   componentDidMount() {
     const catID = this.props.match.params.categoryId;
     const productID = this.props.match.params.productId;
-    this.props.onProductRequest({ catID, productID });
+    this.props.onProductRequest(catID, productID);
+  }
+
+  componentWillUnmount() {
+    this.props.setSingleProductToNull();
   }
 
   render() {
@@ -123,5 +130,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { onProductRequest }
+  { onProductRequest, setSingleProductToNull }
 )(SingleProduct);
