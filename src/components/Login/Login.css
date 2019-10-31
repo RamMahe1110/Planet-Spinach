@@ -40,6 +40,12 @@
   color: #fff;
 }
 
+.form-field span {
+  color: red;
+  text-align: left;
+  margin-bottom: 200px;
+}
+
 .submit,
 .sign-up {
   position: absolute;
