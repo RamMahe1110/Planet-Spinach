@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import validator from "validator";
 import "./SignUp.css";
 
 class SignUp extends Component {
@@ -21,7 +22,7 @@ class SignUp extends Component {
       this.setState({ nameErr: "Name should be atleast 3 characters long :(" });
       return;
     } else {
-      this.setState({ namelErr: null });
+      this.setState({ nameErr: null });
     }
 
     if (!validator.isEmail(this.state.email)) {
@@ -47,7 +48,7 @@ class SignUp extends Component {
           <div className="form-field-signup">
             <p>Name</p>
             <input
-              onInput={this.onSubmit}
+              onInput={this.onInput}
               className="text-field-signup"
               name="name"
               type="text"
@@ -57,7 +58,7 @@ class SignUp extends Component {
           <div className="form-field-signup">
             <p>Email</p>
             <input
-              onInput={this.onSubmit}
+              onInput={this.onInput}
               className="text-field-signup"
               name="email"
               type="text"
@@ -67,14 +68,16 @@ class SignUp extends Component {
           <div className="form-field-signup">
             <p>Password</p>
             <input
-              onInput={this.onSubmit}
+              onInput={this.onInput}
               className="text-field-signup"
               name="password"
               type="password"
             />
             <span>{this.state.passErr}</span>
           </div>
-          <p className="submit-signup">Sign Up</p>
+          <p onClick={this.onSubmit} className="submit-signup">
+            Sign Up
+          </p>
 
           <Link to="/auth/login" className="signup">
             Already a member? Login
