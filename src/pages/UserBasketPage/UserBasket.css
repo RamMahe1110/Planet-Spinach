@@ -69,6 +69,7 @@
 
 .qty-dec,
 .qty-inc {
+  cursor: pointer;
   border-radius: 50%;
   height: 30px;
   width: 30px;

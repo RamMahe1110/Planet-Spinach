@@ -1,13 +1,41 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import {
+  getUserBasket,
+  incrementProductQty,
+  decrementProductQty
+} from "./../../redux/Basket/BasketAction";
 import "./UserBasket.css";
+import Loader from "./../../components/Loader/Loader";
 
 class Usercart extends Component {
+  componentDidMount() {
+    const { currentUser } = this.props.UserReducer;
+    if (currentUser) {
+      this.props.getUserBasket({ token: currentUser.token });
+    }
+  }
+
+  onProductIncrement = id => {
+    const { currentUser } = this.props.UserReducer;
+    if (currentUser) {
+      this.props.incrementProductQty({ id, token: currentUser.token });
+    }
+  };
+
+  onProductDecrement = id => {
+    const { currentUser } = this.props.UserReducer;
+    if (currentUser) {
+      this.props.decrementProductQty({ id, token: currentUser.token });
+    }
+  };
+
   render() {
     const { currentUser } = this.props.UserReducer;
+    const { userBasket } = this.props.BasketReducer;
 
-    if (currentUser) {
+    if (!currentUser) {
       return (
         <div className="loginwarn">
           <h1>
@@ -25,234 +53,36 @@ class Usercart extends Component {
       <div className="basket-page">
         <h2>Your Basket</h2>
         <div className="basket">
-          <div className="basket-item">
-            <img
-              className="basket-item-img"
-              width="50px"
-              height="50px"
-              src="https://www.bigbasket.com/media/uploads/p/xxl/40016670_6-disano-olive-oil-extra-virgin.jpg"
-              alt="basket-item"
-            />
-            <span className="basket-item-name">Oleev Oil</span>
-            <img
-              className="qty-dec"
-              src={require("../../assets/logos/minus.png")}
-            />
-            <p>5</p>
-            <img
-              className="qty-inc"
-              src={require("../../assets/logos/plus.png")}
-            />
-            <span>total</span>
-          </div>
-          <div className="basket-item">
-            <img
-              className="basket-item-img"
-              width="50px"
-              height="50px"
-              src="https://www.bigbasket.com/media/uploads/p/xxl/40016670_6-disano-olive-oil-extra-virgin.jpg"
-              alt="basket-item"
-            />
-            <span className="basket-item-name">Oleev Oil</span>
-            <img
-              className="qty-dec"
-              src={require("../../assets/logos/minus.png")}
-            />
-            <p>5</p>
-            <img
-              className="qty-inc"
-              src={require("../../assets/logos/plus.png")}
-            />
-            <span>total</span>
-          </div>
-          <div className="basket-item">
-            <img
-              className="basket-item-img"
-              width="50px"
-              height="50px"
-              src="https://www.bigbasket.com/media/uploads/p/xxl/40016670_6-disano-olive-oil-extra-virgin.jpg"
-              alt="basket-item"
-            />
-            <span className="basket-item-name">Oleev Oil</span>
-            <img
-              className="qty-dec"
-              src={require("../../assets/logos/minus.png")}
-            />
-            <p>5</p>
-            <img
-              className="qty-inc"
-              src={require("../../assets/logos/plus.png")}
-            />
-            <span>total</span>
-          </div>
-          <div className="basket-item">
-            <img
-              className="basket-item-img"
-              width="50px"
-              height="50px"
-              src="https://www.bigbasket.com/media/uploads/p/xxl/40016670_6-disano-olive-oil-extra-virgin.jpg"
-              alt="basket-item"
-            />
-            <span className="basket-item-name">Oleev Oil</span>
-            <img
-              className="qty-dec"
-              src={require("../../assets/logos/minus.png")}
-            />
-            <p>5</p>
-            <img
-              className="qty-inc"
-              src={require("../../assets/logos/plus.png")}
-            />
-            <span>total</span>
-          </div>
-          <div className="basket-item">
-            <img
-              className="basket-item-img"
-              width="50px"
-              height="50px"
-              src="https://www.bigbasket.com/media/uploads/p/xxl/40016670_6-disano-olive-oil-extra-virgin.jpg"
-              alt="basket-item"
-            />
-            <span className="basket-item-name">Oleev Oil</span>
-            <img
-              className="qty-dec"
-              src={require("../../assets/logos/minus.png")}
-            />
-            <p>5</p>
-            <img
-              className="qty-inc"
-              src={require("../../assets/logos/plus.png")}
-            />
-            <span>total</span>
-          </div>
-          <div className="basket-item">
-            <img
-              className="basket-item-img"
-              width="50px"
-              height="50px"
-              src="https://www.bigbasket.com/media/uploads/p/xxl/40016670_6-disano-olive-oil-extra-virgin.jpg"
-              alt="basket-item"
-            />
-            <span className="basket-item-name">Oleev Oil</span>
-            <img
-              className="qty-dec"
-              src={require("../../assets/logos/minus.png")}
-            />
-            <p>5</p>
-            <img
-              className="qty-inc"
-              src={require("../../assets/logos/plus.png")}
-            />
-            <span>total</span>
-          </div>
-          <div className="basket-item">
-            <img
-              className="basket-item-img"
-              width="50px"
-              height="50px"
-              src="https://www.bigbasket.com/media/uploads/p/xxl/40016670_6-disano-olive-oil-extra-virgin.jpg"
-              alt="basket-item"
-            />
-            <span className="basket-item-name">Oleev Oil</span>
-            <img
-              className="qty-dec"
-              src={require("../../assets/logos/minus.png")}
-            />
-            <p>5</p>
-            <img
-              className="qty-inc"
-              src={require("../../assets/logos/plus.png")}
-            />
-            <span>total</span>
-          </div>
-          <div className="basket-item">
-            <div className="basket-item-img">
-              <img
-                width="50px"
-                height="50px"
-                src="https://www.bigbasket.com/media/uploads/p/xxl/40016670_6-disano-olive-oil-extra-virgin.jpg"
-                alt="basket-item"
-              />
-            </div>
-
-            <span className="basket-item-name">Oleev Oil</span>
-            <img
-              className="qty-dec"
-              src={require("../../assets/logos/minus.png")}
-            />
-            <p>5</p>
-            <img
-              className="qty-inc"
-              src={require("../../assets/logos/plus.png")}
-            />
-            <span>total</span>
-          </div>
-          <div className="basket-item">
-            <div className="basket-item-img">
-              <img
-                width="50px"
-                height="50px"
-                src="https://www.bigbasket.com/media/uploads/p/xxl/40016670_6-disano-olive-oil-extra-virgin.jpg"
-                alt="basket-item"
-              />
-            </div>
-
-            <span className="basket-item-name">Oleev Oil</span>
-            <img
-              className="qty-dec"
-              src={require("../../assets/logos/minus.png")}
-            />
-            <p>5</p>
-            <img
-              className="qty-inc"
-              src={require("../../assets/logos/plus.png")}
-            />
-            <span>total</span>
-          </div>
-          <div className="basket-item">
-            <div className="basket-item-img">
-              <img
-                width="50px"
-                height="50px"
-                src="https://www.bigbasket.com/media/uploads/p/xxl/40016670_6-disano-olive-oil-extra-virgin.jpg"
-                alt="basket-item"
-              />
-            </div>
-
-            <span className="basket-item-name">Oleev Oil</span>
-            <img
-              className="qty-dec"
-              src={require("../../assets/logos/minus.png")}
-            />
-            <p>5</p>
-            <img
-              className="qty-inc"
-              src={require("../../assets/logos/plus.png")}
-            />
-            <span>total</span>
-          </div>
-          <div className="basket-item">
-            <div className="basket-item-img">
-              <img
-                width="50px"
-                height="50px"
-                src="https://www.bigbasket.com/media/uploads/p/xxl/40016670_6-disano-olive-oil-extra-virgin.jpg"
-                alt="basket-item"
-              />
-            </div>
-
-            <span className="basket-item-name">Oleev Oil</span>
-            <img
-              className="qty-dec"
-              src={require("../../assets/logos/minus.png")}
-            />
-            <p>5</p>
-            <img
-              className="qty-inc"
-              src={require("../../assets/logos/plus.png")}
-            />
-            <span>total</span>
-          </div>
+          {userBasket === null ? (
+            <Loader />
+          ) : (
+            userBasket.map(item => (
+              <div className="basket-item">
+                <img
+                  className="basket-item-img"
+                  width="50px"
+                  height="50px"
+                  src={item.productImg}
+                  alt="basket-item"
+                />
+                <span className="basket-item-name">{item.productName}</span>
+                <img
+                  onClick={() => this.onProductDecrement(item.cartItemId)}
+                  className="qty-dec"
+                  src={require("../../assets/logos/minus.png")}
+                  alt="dec"
+                />
+                <p>{item.quantity}</p>
+                <img
+                  onClick={() => this.onProductIncrement(item.cartItemId)}
+                  className="qty-inc"
+                  src={require("../../assets/logos/plus.png")}
+                  alt="inc"
+                />
+                <span>{item.total}</span>
+              </div>
+            ))
+          )}
         </div>
         <div className="bill">
           <p className="total">Total: $69.69</p>
@@ -264,7 +94,11 @@ class Usercart extends Component {
 }
 
 const mapStateToProps = state => ({
-  UserReducer: state.UserReducer
+  UserReducer: state.UserReducer,
+  BasketReducer: state.BasketReducer
 });
 
-export default connect(mapStateToProps)(Usercart);
+export default connect(
+  mapStateToProps,
+  { getUserBasket, incrementProductQty, decrementProductQty }
+)(Usercart);
