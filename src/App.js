@@ -28,7 +28,7 @@ class App extends React.Component {
           }
         />
         <Route path="/category" component={CategoryRoutes} />
-        <Route exact path="/usercart" component={UserBasket} />
+        <Route exact path="/userbasket" component={UserBasket} />
       </div>
     );
   }

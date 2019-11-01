@@ -30,12 +30,12 @@ class Topbar extends Component {
             <Link to="/auth/login" className="item">
               Login
             </Link>
-            <div className="item">
+            <Link to="/userbasket" className="item">
               <img
                 src={require("../../assets/logos/basket.png")}
                 alt="shopping-basket"
               />
-            </div>
+            </Link>
           </div>
           <div className="items-dropdown">
             <div onClick={this.onDropdownClick} className="item dropdown">
