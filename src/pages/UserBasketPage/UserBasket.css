@@ -1,0 +1,30 @@
+.loginwarn {
+  position: relative;
+  height: 100vh;
+  background: #ccc;
+}
+
+.loginwarn h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #878787;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn {
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 13%;
+  font-size: 1vw;
+  padding: 10px;
+  cursor: pointer;
+  background: rgb(30, 192, 0);
+  color: #fff;
+  border-radius: 5px;
+}
