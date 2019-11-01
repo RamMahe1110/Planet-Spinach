@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import validator from "validator";
+import { onUserSignUp } from "./../../redux/User/UserActions";
 import "./SignUp.css";
 
 class SignUp extends Component {
@@ -18,21 +20,23 @@ class SignUp extends Component {
   };
 
   onSubmit = () => {
-    if (!validator.isLength(this.state.name, { min: 3 })) {
+    const { name, email, password } = this.state;
+
+    if (!validator.isLength(name, { min: 3 })) {
       this.setState({ nameErr: "Name should be atleast 3 characters long :(" });
       return;
     } else {
       this.setState({ nameErr: null });
     }
 
-    if (!validator.isEmail(this.state.email)) {
+    if (!validator.isEmail(email)) {
       this.setState({ emailErr: "Please enter a valid email :(" });
       return;
     } else {
       this.setState({ emailErr: null });
     }
 
-    if (!validator.isLength(this.state.password, { min: 6 })) {
+    if (!validator.isLength(password, { min: 6 })) {
       this.setState({
         passErr: "Password must be atleast 6 characters long :("
       });
@@ -40,10 +44,15 @@ class SignUp extends Component {
     } else {
       this.setState({ passErr: null });
     }
+
+    const data = { name, email, password };
+    this.props.onUserSignUp(data);
   };
   render() {
+    const { signupErr } = this.props.UserReducer;
     return (
       <div className="main-signup">
+        {signupErr ? <span>{signupErr}</span> : null}
         <div className="form-signup">
           <div className="form-field-signup">
             <p>Name</p>
@@ -89,4 +98,11 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+const mapStateToProps = state => ({
+  UserReducer: state.UserReducer
+});
+
+export default connect(
+  mapStateToProps,
+  { onUserSignUp }
+)(SignUp);

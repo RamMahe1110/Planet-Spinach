@@ -76,7 +76,7 @@
 
 .category-item:hover {
   background: rgb(30, 192, 0);
-  z-index: 20;
+  color: rgb(30, 192, 0);
 }
 
 .category-item .category-title:hover {
