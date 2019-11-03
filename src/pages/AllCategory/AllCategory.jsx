@@ -32,8 +32,12 @@ class AllCategory extends Component {
         ) : (
           <div className="category-list">
             {allCatList.map(catItem => (
-              <Link to={`/category/${catItem.catId}`} className="category-item">
-                <h6 className="category-title">{catItem.catName}</h6>
+              <Link
+                key={catItem.id}
+                to={`/category/${catItem.id}`}
+                className="category-item"
+              >
+                <h6 className="category-title">{catItem.name}</h6>
               </Link>
             ))}
           </div>

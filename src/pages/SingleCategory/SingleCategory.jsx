@@ -35,6 +35,7 @@ class SingleCategory extends Component {
           <div className="all-products">
             {selectedCat.products.map(product => (
               <ProductPreview
+                key={product.id}
                 product={product}
                 catID={categoryId}
                 productID={product.id}

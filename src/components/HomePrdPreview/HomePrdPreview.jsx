@@ -12,7 +12,7 @@ class HomePrdPreview extends Component {
   componentDidMount() {
     const data = {
       categories: ["Healthy Carbs", "Animal Products", "Plant Protein"],
-      limit: 3
+      limit: 4
     };
     this.props.getLimitedProducts(data);
   }

@@ -1,9 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import { withRouter } from "react-router-dom";
 import "./ProductPreview.css";
 
 const ProductPreview = ({ product, catID, productID, history }) => {
-  console.log("testttting", catID, productID);
   return (
     <div
       onClick={() => history.push(`/category/${catID}/${productID}`)}

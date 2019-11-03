@@ -19,7 +19,6 @@ const ProductReducer = (state = initialState, action) => {
       };
 
     case "ON-CATEGORY-SELECT":
-      console.log("sam", action.data);
       return {
         ...state,
         selectedCat: action.data

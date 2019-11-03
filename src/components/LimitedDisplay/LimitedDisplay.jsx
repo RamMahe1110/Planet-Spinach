@@ -17,7 +17,7 @@ class LimitedDisplay extends Component {
                 {item.products.map((product, i) => {
                   if (i < 4) {
                     return (
-                      <div className="limited-item" key={product.name}>
+                      <div className="limited-item" key={product.id}>
                         <ProductPreview
                           product={product}
                           catID={item.catId}
@@ -31,8 +31,6 @@ class LimitedDisplay extends Component {
               </div>
             </div>
           );
-
-          return null;
         })}
       </div>
     );

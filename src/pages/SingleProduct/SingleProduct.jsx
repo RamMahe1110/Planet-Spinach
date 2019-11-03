@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import "./SingleProduct.css";
+import { connect } from "react-redux";
 import {
   onProductRequest,
   setSingleProductToNull
 } from "./../../redux/Product/ProductActions";
+import { addProduct } from "../../redux/Basket/BasketAction";
 import Loader from "./../../components/Loader/Loader";
-import { connect } from "react-redux";
+import "./SingleProduct.css";
 
 class SingleProduct extends Component {
   state = {
@@ -17,14 +18,29 @@ class SingleProduct extends Component {
   };
 
   componentDidMount() {
-    const catID = this.props.match.params.categoryId;
     const productID = this.props.match.params.productId;
-    this.props.onProductRequest(catID, productID);
+    this.props.onProductRequest(productID);
   }
 
   componentWillUnmount() {
     this.props.setSingleProductToNull();
   }
+
+  onAddToBasketClick = () => {
+    const { currentUser } = this.props.UserReducer;
+    const { selectedProduct } = this.props.ProductReducer;
+    if (!currentUser) {
+      alert("Please Login to Perform that action");
+    } else {
+      const data = {
+        token: currentUser.token,
+        productid: selectedProduct.id,
+        categoryid: selectedProduct.catId,
+        price: selectedProduct.price.amount
+      };
+      this.props.addProduct(data);
+    }
+  };
 
   render() {
     const { selectedProduct } = this.props.ProductReducer;
@@ -44,26 +60,30 @@ class SingleProduct extends Component {
             <img
               className="main-img"
               src={selectedProduct.images[this.state.currentImg]}
-              alt="x"
+              alt={selectedProduct.name}
             />
             <div className="images-preview">
               {selectedProduct.images.map((img, i) => (
                 <img
                   onClick={() => this.onImageClick(i)}
                   className={`small-img ${
-                    this.state.currentImg == i ? `curr-small-img` : ``
+                    this.state.currentImg === i ? `curr-small-img` : ``
                   }`}
+                  key={i}
                   src={img}
                   width="100px"
                   height="auto"
+                  alt={selectedProduct.name}
                 />
               ))}
             </div>
           </div>
           <div className="order">
             <h2 className="pr-name">Product name is here</h2>
-            <h5 className="pr-price">$ 49.99</h5>
-            <p className="addToBasketBtn">Add To Basket</p>
+            <h5 className="pr-price">$ {selectedProduct.price.amount}</h5>
+            <p onClick={this.onAddToBasketClick} className="addToBasketBtn">
+              Add To Basket
+            </p>
             <p className="checkoutBtn">Checkout Basket</p>
             <ul className="all-del-notes">
               <li className="delivery del-1">Cash on delivery available</li>
@@ -125,10 +145,11 @@ class SingleProduct extends Component {
 }
 
 const mapStateToProps = state => ({
-  ProductReducer: state.ProductReducer
+  ProductReducer: state.ProductReducer,
+  UserReducer: state.UserReducer
 });
 
 export default connect(
   mapStateToProps,
-  { onProductRequest, setSingleProductToNull }
+  { onProductRequest, setSingleProductToNull, addProduct }
 )(SingleProduct);

@@ -5,7 +5,6 @@ import SingleCategory from "../../pages/SingleCategory/SingleCategory";
 import SingleProduct from "../../pages/SingleProduct/SingleProduct";
 
 const CategoryRoutes = props => {
-  console.log(props.match);
   return (
     <div>
       <Switch>

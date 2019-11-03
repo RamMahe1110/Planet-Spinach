@@ -100,6 +100,14 @@
   font-weight: bold;
 }
 
+.empty-basket-msg {
+  position: absolute;
+  color: #878787;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .payment {
   flex: 1;
   background: rgb(30, 192, 0);

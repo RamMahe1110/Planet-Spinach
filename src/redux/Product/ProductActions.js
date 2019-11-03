@@ -30,15 +30,13 @@ export const setCategoryToNull = () => ({
   type: "SET-CATEGORY-TO-NULL"
 });
 
-export const onProductRequest = (catID, productID) => dispatch => {
-  axios
-    .post(`http://localhost:5000/product/category/${catID}/${productID}`)
-    .then(res =>
-      dispatch({
-        type: "ON-SINGLE-PRODUCT-SELECT",
-        data: res.data
-      })
-    );
+export const onProductRequest = productID => dispatch => {
+  axios.post(`http://localhost:5000/product/single/${productID}`).then(res =>
+    dispatch({
+      type: "ON-SINGLE-PRODUCT-SELECT",
+      data: res.data
+    })
+  );
 };
 
 export const setSingleProductToNull = () => ({

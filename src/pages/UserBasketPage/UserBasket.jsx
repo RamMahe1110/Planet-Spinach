@@ -3,13 +3,13 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import {
   getUserBasket,
-  incrementProductQty,
+  addProduct,
   decrementProductQty
 } from "./../../redux/Basket/BasketAction";
 import "./UserBasket.css";
 import Loader from "./../../components/Loader/Loader";
 
-class Usercart extends Component {
+class UserBasket extends Component {
   componentDidMount() {
     const { currentUser } = this.props.UserReducer;
     if (currentUser) {
@@ -20,7 +20,7 @@ class Usercart extends Component {
   onProductIncrement = id => {
     const { currentUser } = this.props.UserReducer;
     if (currentUser) {
-      this.props.incrementProductQty({ id, token: currentUser.token });
+      this.props.addProduct({ id, token: currentUser.token });
     }
   };
 
@@ -40,7 +40,10 @@ class Usercart extends Component {
         <div className="loginwarn">
           <h1>
             Please Login to see your Basket{" "}
-            <img src={require("../../assets/logos/basketwarn.png")} />
+            <img
+              src={require("../../assets/logos/basketwarn.png")}
+              alt="full basket"
+            />
           </h1>
           <Link className="login-btn" to="/auth/login">
             Click here to Login
@@ -55,9 +58,9 @@ class Usercart extends Component {
         <div className="basket">
           {userBasket === null ? (
             <Loader />
-          ) : (
+          ) : userBasket.length > 0 ? (
             userBasket.map(item => (
-              <div className="basket-item">
+              <div key={item.id} className="basket-item">
                 <img
                   className="basket-item-img"
                   width="50px"
@@ -67,14 +70,14 @@ class Usercart extends Component {
                 />
                 <span className="basket-item-name">{item.productName}</span>
                 <img
-                  onClick={() => this.onProductDecrement(item.cartItemId)}
+                  onClick={() => this.onProductDecrement(item.id)}
                   className="qty-dec"
                   src={require("../../assets/logos/minus.png")}
                   alt="dec"
                 />
                 <p>{item.quantity}</p>
                 <img
-                  onClick={() => this.onProductIncrement(item.cartItemId)}
+                  onClick={() => this.onProductIncrement(item.id)}
                   className="qty-inc"
                   src={require("../../assets/logos/plus.png")}
                   alt="inc"
@@ -82,6 +85,8 @@ class Usercart extends Component {
                 <span>{item.total}</span>
               </div>
             ))
+          ) : (
+            <h1 className="empty-basket-msg">Your Basket is empty </h1>
           )}
         </div>
         <div className="bill">
@@ -100,5 +105,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getUserBasket, incrementProductQty, decrementProductQty }
-)(Usercart);
+  { getUserBasket, addProduct, decrementProductQty }
+)(UserBasket);
