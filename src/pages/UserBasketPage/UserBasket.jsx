@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import {
   getUserBasket,
   addProduct,
-  decrementProductQty
+  decrementProductQty,
+  setBasketToNull
 } from "./../../redux/Basket/BasketAction";
 import {
   setFooterDisplayToFalse,
@@ -38,6 +39,7 @@ class UserBasket extends Component {
   };
 
   componentWillUnmount() {
+    this.props.setBasketToNull();
     this.props.setFooterDisplayToTrue();
   }
 
@@ -120,6 +122,7 @@ export default connect(
     addProduct,
     decrementProductQty,
     setFooterDisplayToFalse,
-    setFooterDisplayToTrue
+    setFooterDisplayToTrue,
+    setBasketToNull
   }
 )(UserBasket);

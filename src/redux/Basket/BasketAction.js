@@ -28,3 +28,9 @@ export const decrementProductQty = data => dispatch => {
       });
     });
 };
+
+export const setBasketToNull = () => {
+  return {
+    type: "SET-BASKET-TO-NULL"
+  };
+};

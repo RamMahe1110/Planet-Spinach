@@ -9,6 +9,11 @@ const BasketReducer = (state = initialState, action) => {
         ...state,
         userBasket: action.data
       };
+    case "SET-BASKET-TO-NULL":
+      return {
+        ...state,
+        userBasket: null
+      };
     default:
       return state;
   }
