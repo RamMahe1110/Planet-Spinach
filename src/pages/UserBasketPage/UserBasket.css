@@ -67,6 +67,11 @@
   box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
 }
 
+.basket-item-name {
+  width: 30%;
+  text-align: left;
+}
+
 .qty-dec,
 .qty-inc {
   cursor: pointer;
@@ -131,9 +136,6 @@
   }
 
   .basket-item {
-    width: 95%;
-  }
-  .bill {
     width: 95%;
   }
   .total {

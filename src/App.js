@@ -6,7 +6,7 @@ import Topbar from "./components/Topbar/Topbar";
 import CategoryRoutes from "./components/CategoryRoutes/CategoryRoutes";
 import Authentication from "./pages/Authentication/Authentication";
 import UserBasket from "./pages/UserBasketPage/UserBasket";
-//import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 class App extends React.Component {
@@ -17,6 +17,7 @@ class App extends React.Component {
 
   render() {
     const { currentUser } = this.props.UserReducer;
+    const { display } = this.props.FooterReducer;
     return (
       <div className="App">
         <Topbar />
@@ -29,13 +30,15 @@ class App extends React.Component {
         />
         <Route path="/category" component={CategoryRoutes} />
         <Route exact path="/userbasket" component={UserBasket} />
+        {display ? <Footer /> : null}
       </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  UserReducer: state.UserReducer
+  UserReducer: state.UserReducer,
+  FooterReducer: state.FooterReducer
 });
 
 export default connect(

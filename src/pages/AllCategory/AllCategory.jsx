@@ -27,11 +27,16 @@ class AllCategory extends Component {
             <span className="highlighted"> healthy food categories</span>
           </h2>
         </div>
-        {allCatList === null ? (
-          <Loader />
-        ) : (
-          <div className="category-list">
-            {allCatList.map(catItem => (
+
+        <div className="category-list">
+          {allCatList === null ? (
+            <div className="all-cat-loader-ps">
+              <div className="all-cat-loader">
+                <Loader />
+              </div>
+            </div>
+          ) : (
+            allCatList.map(catItem => (
               <Link
                 key={catItem.id}
                 to={`/category/${catItem.id}`}
@@ -39,9 +44,9 @@ class AllCategory extends Component {
               >
                 <h6 className="category-title">{catItem.name}</h6>
               </Link>
-            ))}
-          </div>
-        )}
+            ))
+          )}
+        </div>
       </div>
     );
   }

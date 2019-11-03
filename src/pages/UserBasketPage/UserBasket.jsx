@@ -6,8 +6,12 @@ import {
   addProduct,
   decrementProductQty
 } from "./../../redux/Basket/BasketAction";
-import "./UserBasket.css";
+import {
+  setFooterDisplayToFalse,
+  setFooterDisplayToTrue
+} from "../../redux/Footer/FooterAction";
 import Loader from "./../../components/Loader/Loader";
+import "./UserBasket.css";
 
 class UserBasket extends Component {
   componentDidMount() {
@@ -15,6 +19,8 @@ class UserBasket extends Component {
     if (currentUser) {
       this.props.getUserBasket({ token: currentUser.token });
     }
+
+    this.props.setFooterDisplayToFalse();
   }
 
   onProductIncrement = id => {
@@ -30,6 +36,10 @@ class UserBasket extends Component {
       this.props.decrementProductQty({ id, token: currentUser.token });
     }
   };
+
+  componentWillUnmount() {
+    this.props.setFooterDisplayToTrue();
+  }
 
   render() {
     const { currentUser } = this.props.UserReducer;
@@ -82,7 +92,7 @@ class UserBasket extends Component {
                   src={require("../../assets/logos/plus.png")}
                   alt="inc"
                 />
-                <span>{item.total}</span>
+                <span className="item-total">{item.total}</span>
               </div>
             ))
           ) : (
@@ -105,5 +115,11 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getUserBasket, addProduct, decrementProductQty }
+  {
+    getUserBasket,
+    addProduct,
+    decrementProductQty,
+    setFooterDisplayToFalse,
+    setFooterDisplayToTrue
+  }
 )(UserBasket);

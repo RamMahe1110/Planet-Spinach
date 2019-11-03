@@ -43,6 +43,19 @@
   background: #000;
 }
 
+.all-cat-loader-ps {
+  position: relative;
+  height: 45vh;
+  width: 100%;
+}
+
+.all-cat-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .category-item {
   position: relative;
   width: 25%;
