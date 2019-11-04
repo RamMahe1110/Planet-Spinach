@@ -24,10 +24,46 @@
   flex-wrap: wrap;
 }
 
+.page-btn {
+  position: relative;
+  height: 300px;
+}
+
+.pre-btn {
+  position: absolute;
+  top: 40%;
+  left: 47%;
+  -moz-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+  -webkit-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+  box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.next-btn {
+  position: absolute;
+  top: 40%;
+  left: 53%;
+  -moz-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+  -webkit-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+  box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 700px) {
   .single-category h1 {
     width: 80%;
-
     font-size: 5vw;
+  }
+
+  .pre-btn {
+    left: 40%;
+  }
+
+  .next-btn {
+    left: 60%;
   }
 }

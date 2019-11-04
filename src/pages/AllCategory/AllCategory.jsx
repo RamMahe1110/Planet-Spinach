@@ -22,10 +22,11 @@ class AllCategory extends Component {
     return (
       <div className="all-category">
         <div className="top-content-all-cat">
-          <h2>
+          <h2 className="large-dis">
             Select from our wide range of
             <span className="highlighted"> healthy food categories</span>
           </h2>
+          <h1 className="small-dis-head">healthy food categories</h1>
         </div>
 
         <div className="category-list">

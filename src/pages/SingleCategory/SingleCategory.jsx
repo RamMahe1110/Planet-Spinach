@@ -42,6 +42,16 @@ class SingleCategory extends Component {
               />
             ))}
           </div>
+          <div className="page-btn">
+            <img
+              src={require("../../assets/logos/backbtn.png")}
+              className="pre-btn"
+            />
+            <img
+              src={require("../../assets/logos/nextbtn.png")}
+              className="next-btn"
+            />
+          </div>
         </div>
       );
     }

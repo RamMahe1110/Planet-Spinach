@@ -1,4 +1,32 @@
 .footer {
+  position: relative;
   height: 200px;
   background: #000;
+  color: #878787;
+}
+
+.brand-hl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Leckerli One", cursive;
+  display: flex;
+  align-items: center;
+}
+
+.brand-hl h2 {
+  font-size: 1vw;
+  padding-right: 10px;
+}
+
+.brand-hl img {
+  width: 50px;
+  height: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .brand-hl h2 {
+    font-size: 4vw;
+  }
 }
