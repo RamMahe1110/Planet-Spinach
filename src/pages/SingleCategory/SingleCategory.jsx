@@ -9,10 +9,30 @@ import "./SingleCategory.css";
 import ProductPreview from "../../components/ProductPreview/ProductPreview";
 
 class SingleCategory extends Component {
+  state = {
+    currPage: 1,
+    limit: 8
+  };
+
   componentDidMount() {
+    const { currPage, limit } = this.state;
     const { categoryId } = this.props.match.params;
-    this.props.onCategoryRequest(categoryId);
+    this.props.onCategoryRequest(categoryId, currPage, limit);
   }
+
+  onNextButtonClick = () => {
+    const { currPage, limit } = this.state;
+    const { categoryId } = this.props.match.params;
+    this.props.onCategoryRequest(categoryId, currPage + 1, limit);
+    this.setState({ currPage: currPage + 1 });
+  };
+
+  onPrevButtonClick = () => {
+    const { currPage, limit } = this.state;
+    const { categoryId } = this.props.match.params;
+    this.props.onCategoryRequest(categoryId, currPage - 1, limit);
+    this.setState({ currPage: currPage - 1 });
+  };
 
   componentWillUnmount() {
     this.props.setCategoryToNull();
@@ -21,6 +41,7 @@ class SingleCategory extends Component {
   render() {
     const { selectedCat } = this.props;
     const { categoryId } = this.props.match.params;
+    const { currPage } = this.state;
 
     if (selectedCat === null) {
       return (
@@ -42,16 +63,39 @@ class SingleCategory extends Component {
               />
             ))}
           </div>
-          <div className="page-btn">
-            <img
-              src={require("../../assets/logos/backbtn.png")}
-              className="pre-btn"
-            />
-            <img
-              src={require("../../assets/logos/nextbtn.png")}
-              className="next-btn"
-            />
-          </div>
+          {currPage > 1 && selectedCat.hasMore ? (
+            <div className="page-btn">
+              <img
+                onClick={this.onPrevButtonClick}
+                src={require("../../assets/logos/backbtn.png")}
+                className="pre-btn"
+              />
+              <img
+                onClick={this.onNextButtonClick}
+                src={require("../../assets/logos/nextbtn.png")}
+                className="next-btn"
+              />
+            </div>
+          ) : !(currPage <= 1) ? (
+            <div className="page-btn">
+              <span className="end-text">That's all freaks :)</span>
+              <img
+                style={{ left: "50%" }}
+                onClick={this.onPrevButtonClick}
+                src={require("../../assets/logos/backbtn.png")}
+                className="pre-btn"
+              />
+            </div>
+          ) : (
+            <div className="page-btn">
+              <img
+                style={{ left: "50%" }}
+                onClick={this.onNextButtonClick}
+                src={require("../../assets/logos/nextbtn.png")}
+                className="next-btn"
+              />
+            </div>
+          )}
         </div>
       );
     }

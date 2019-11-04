@@ -53,6 +53,14 @@
   cursor: pointer;
 }
 
+.end-text {
+  color: #ccc;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 15%;
+  left: 50%;
+}
+
 @media screen and (max-width: 700px) {
   .single-category h1 {
     width: 80%;

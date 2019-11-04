@@ -48,6 +48,7 @@
 
 .submit-signup,
 .signup {
+  cursor: pointer;
   position: absolute;
   background: rgb(30, 192, 0);
   color: #fff;
