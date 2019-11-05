@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import validator from "validator";
-import { onUserLogin } from "../../redux/User/UserActions";
+import { onUserLogin, setErrToNull } from "../../redux/User/UserActions";
 import "./Login.css";
 
 class Login extends Component {
@@ -20,7 +20,11 @@ class Login extends Component {
   onSubmit = () => {
     const { email, password } = this.state;
     if (!validator.isEmail(email)) {
-      this.setState({ emailErr: "Please enter a valid email :(" });
+      this.setState({
+        emailErr: "Please enter a valid email :(",
+        passErr: null
+      });
+      this.props.setErrToNull();
       return;
     } else {
       this.setState({ emailErr: null });
@@ -28,8 +32,10 @@ class Login extends Component {
 
     if (!validator.isLength(password, { min: 6 })) {
       this.setState({
-        passErr: "Password must be atleast 6 characters long :("
+        passErr: "Password must be atleast 6 characters long :(",
+        emailErr: null
       });
+      this.props.setErrToNull();
       return;
     } else {
       this.setState({ passErr: null });
@@ -43,7 +49,7 @@ class Login extends Component {
     const { loginErr } = this.props.UserReducer;
     return (
       <div className="main">
-        {loginErr ? <span>{loginErr}</span> : null}
+        {loginErr ? <span className="errr">{loginErr}</span> : null}
         <div className="form">
           <div className="form-field">
             <p>Email</p>
@@ -85,5 +91,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { onUserLogin }
+  { onUserLogin, setErrToNull }
 )(Login);

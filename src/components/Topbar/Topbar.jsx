@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { onUserLogout } from "../../redux/User/UserActions";
 import "./Topbar.css";
 
 class Topbar extends Component {
@@ -12,7 +13,12 @@ class Topbar extends Component {
     this.setState({ dropdown: !this.state.dropdown });
   };
 
+  onLogoutClick = () => {
+    this.props.onUserLogout();
+  };
+
   render() {
+    const { currentUser } = this.props.UserReducer;
     return (
       <div className="topbar-whole">
         <div className="topbar">
@@ -27,9 +33,16 @@ class Topbar extends Component {
             <Link to="/category/all" className="item">
               Category
             </Link>
-            <Link to="/auth/login" className="item">
-              Login
-            </Link>
+            {currentUser === null ? (
+              <Link to="/auth/login" className="item">
+                Login
+              </Link>
+            ) : (
+              <p className="item" onClick={this.onLogoutClick}>
+                Logout
+              </p>
+            )}
+
             <Link to="/userbasket" className="item">
               <img
                 src={require("../../assets/logos/basket.png")}
@@ -68,6 +81,11 @@ class Topbar extends Component {
   }
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+  UserReducer: state.UserReducer
+});
 
-export default connect(mapStateToProps)(Topbar);
+export default connect(
+  mapStateToProps,
+  { onUserLogout }
+)(Topbar);

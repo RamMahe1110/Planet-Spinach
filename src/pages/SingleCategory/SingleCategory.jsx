@@ -63,7 +63,11 @@ class SingleCategory extends Component {
               />
             ))}
           </div>
-          {currPage > 1 && selectedCat.hasMore ? (
+          {currPage === 1 && !selectedCat.hasMore ? (
+            <div className="page-btn">
+              <span className="end-text">That's all freaks :)</span>
+            </div>
+          ) : currPage > 1 && selectedCat.hasMore ? (
             <div className="page-btn">
               <img
                 onClick={this.onPrevButtonClick}

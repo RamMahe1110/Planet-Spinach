@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import validator from "validator";
-import { onUserSignUp } from "./../../redux/User/UserActions";
+import { onUserSignUp, setErrToNull } from "./../../redux/User/UserActions";
 import "./SignUp.css";
 
 class SignUp extends Component {
@@ -23,14 +23,24 @@ class SignUp extends Component {
     const { name, email, password } = this.state;
 
     if (!validator.isLength(name, { min: 3 })) {
-      this.setState({ nameErr: "Name should be atleast 3 characters long :(" });
+      this.setState({
+        nameErr: "Name should be atleast 3 characters long :(",
+        emailErr: null,
+        passErr: null
+      });
+      this.props.setErrToNull();
       return;
     } else {
       this.setState({ nameErr: null });
     }
 
     if (!validator.isEmail(email)) {
-      this.setState({ emailErr: "Please enter a valid email :(" });
+      this.setState({
+        emailErr: "Please enter a valid email :(",
+        nameErr: null,
+        passErr: null
+      });
+      this.props.setErrToNull();
       return;
     } else {
       this.setState({ emailErr: null });
@@ -38,8 +48,11 @@ class SignUp extends Component {
 
     if (!validator.isLength(password, { min: 6 })) {
       this.setState({
-        passErr: "Password must be atleast 6 characters long :("
+        passErr: "Password must be atleast 6 characters long :(",
+        nameErr: null,
+        emailErr: null
       });
+      this.props.setErrToNull();
       return;
     } else {
       this.setState({ passErr: null });
@@ -52,7 +65,7 @@ class SignUp extends Component {
     const { signupErr } = this.props.UserReducer;
     return (
       <div className="main-signup">
-        {signupErr ? <span>{signupErr}</span> : null}
+        {signupErr ? <span className="s-errr">{signupErr}</span> : null}
         <div className="form-signup">
           <div className="form-field-signup">
             <p>Name</p>
@@ -104,5 +117,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { onUserSignUp }
+  { onUserSignUp, setErrToNull }
 )(SignUp);

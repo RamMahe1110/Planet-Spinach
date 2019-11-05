@@ -3,6 +3,17 @@
   height: 600px;
 }
 
+.s-errr {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  color: red;
+  background-color: #ccc;
+  width: 28%;
+}
+
 .form-signup {
   position: relative;
   background: black;
@@ -81,6 +92,10 @@
 }
 
 @media screen and (max-width: 700px) {
+  .s-errr {
+    width: 80%;
+  }
+
   .form-signup {
     width: 90%;
   }

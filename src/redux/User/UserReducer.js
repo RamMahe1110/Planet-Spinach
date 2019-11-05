@@ -25,6 +25,21 @@ const UserReducer = (state = initialState, action) => {
         loginErr: action.data
       };
 
+    case "SET-ERR-TO-NULL":
+      return {
+        ...state,
+        signupErr: null,
+        loginErr: null
+      };
+
+    case "ON-USER-LOGOUT":
+      return {
+        ...state,
+        currentUser: null,
+        signupErr: null,
+        loginErr: null
+      };
+
     default:
       return state;
   }

@@ -17,3 +17,11 @@ export const onUserLogin = data => dispatch => {
       dispatch({ type: "ON-LOGIN-ERROR", data: err.response.data })
     );
 };
+
+export const setErrToNull = () => ({
+  type: "SET-ERR-TO-NULL"
+});
+
+export const onUserLogout = () => ({
+  type: "ON-USER-LOGOUT"
+});

@@ -14,6 +14,13 @@ const BasketReducer = (state = initialState, action) => {
         ...state,
         userBasket: null
       };
+
+    case "ON-USER-LOGOUT":
+      return {
+        ...state,
+        userBasket: null
+      };
+
     default:
       return state;
   }
