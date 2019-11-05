@@ -7,6 +7,7 @@ import {
 import { addProduct } from "../../redux/Basket/BasketAction";
 import Loader from "./../../components/Loader/Loader";
 import "./SingleProduct.css";
+import { Link } from "react-router-dom";
 
 class SingleProduct extends Component {
   state = {
@@ -84,7 +85,9 @@ class SingleProduct extends Component {
             <p onClick={this.onAddToBasketClick} className="addToBasketBtn">
               Add To Basket
             </p>
-            <p className="checkoutBtn">Checkout Basket</p>
+            <Link to="/userbasket" className="checkoutBtn">
+              Checkout Basket
+            </Link>
             <ul className="all-del-notes">
               <li className="delivery del-1">Cash on delivery available</li>
               <li className="delivery del-2">
