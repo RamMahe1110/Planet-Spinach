@@ -18,7 +18,10 @@ class Homepage extends Component {
         <HomePrdPreview />
         <div className="middle-content">
           <h1>
-            Veggies are here to change your life.
+            <span className="hider">
+              {" "}
+              Veggies are here to change your life.{" "}
+            </span>
             <span className="discount"> Get 20% off on all veggies</span>
           </h1>
           <Link to="/category/5">Checkout our Organic Vegetables</Link>

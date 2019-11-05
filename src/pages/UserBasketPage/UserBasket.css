@@ -123,6 +123,21 @@
 }
 
 @media screen and (max-width: 700px) {
+  .loginwarn h1 {
+    width: 100%;
+    font-size: 4vw;
+  }
+
+  .loginwarn h1 img {
+    width: 60px;
+    height: auto;
+  }
+
+  .login-btn {
+    width: 40%;
+    font-size: 3vw;
+  }
+
   .basket-page h2 {
     width: 95%;
     margin: 0 auto 20px auto;

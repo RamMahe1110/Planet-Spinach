@@ -94,7 +94,7 @@ class UserBasket extends Component {
                   src={require("../../assets/logos/plus.png")}
                   alt="inc"
                 />
-                <span className="item-total">{item.total}</span>
+                <span className="item-total">${item.total}</span>
               </div>
             ))
           ) : (

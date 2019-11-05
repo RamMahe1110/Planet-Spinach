@@ -85,8 +85,8 @@ class SingleProduct extends Component {
             <p onClick={this.onAddToBasketClick} className="addToBasketBtn">
               Add To Basket
             </p>
-            <Link to="/userbasket" className="checkoutBtn">
-              Checkout Basket
+            <Link to="/userbasket">
+              <p className="checkoutBtn">Checkout Basket</p>
             </Link>
             <ul className="all-del-notes">
               <li className="delivery del-1">Cash on delivery available</li>
