@@ -80,7 +80,7 @@ a {
     flex-direction: column;
   }
 
-  .responsive-items li {
+  .responsive-items .res-link {
     text-align: left;
     background: black;
     color: #fff;

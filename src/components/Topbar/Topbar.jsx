@@ -63,17 +63,35 @@ class Topbar extends Component {
         </div>
         {this.state.dropdown ? (
           <ul className="responsive-items">
-            <li>Home</li>
-            <li>Category</li>
-            <li>Login</li>
-            <li>
+            <Link onClick={this.onDropdownClick} to="/" className="res-link">
+              Home
+            </Link>
+            <Link
+              onClick={this.onDropdownClick}
+              to="/category/all"
+              className="res-link"
+            >
+              Category
+            </Link>
+            <Link
+              onClick={this.onDropdownClick}
+              to="/auth/login"
+              className="res-link"
+            >
+              Login
+            </Link>
+            <Link
+              onClick={this.onDropdownClick}
+              to="/userbasket"
+              className="res-link"
+            >
               <img
                 width="35px"
                 height="35px"
                 src={require("../../assets/logos/basket.png")}
                 alt="shopping-basket"
               />
-            </li>
+            </Link>
           </ul>
         ) : null}
       </div>
