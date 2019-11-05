@@ -1,5 +1,6 @@
 const initialState = {
-  display: true
+  display: true,
+  class: null
 };
 
 const FooterReducer = (state = initialState, action) => {
@@ -13,6 +14,12 @@ const FooterReducer = (state = initialState, action) => {
       return {
         ...state,
         display: false
+      };
+
+    case "CHANGE-FOOTER-CLASS":
+      return {
+        ...state,
+        class: action.data
       };
 
     default:

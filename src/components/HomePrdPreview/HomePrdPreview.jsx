@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import {
   getLimitedProducts,
   setProductsToNull
 } from "./../../redux/Product/ProductActions";
 import LimitedDisplay from "./../LimitedDisplay/LimitedDisplay";
 import Loader from "./../Loader/Loader";
-import { connect } from "react-redux";
 import "./HomePrdPreview.css";
 
 class HomePrdPreview extends Component {
@@ -35,7 +36,9 @@ class HomePrdPreview extends Component {
             <h1>Products to make you shine</h1>
           </div>
           <LimitedDisplay items={products} />
-          <h3>Explore all Categories</h3>
+          <Link to="/category/all">
+            <h3 className="explore-btn">Explore all Categories</h3>
+          </Link>
         </div>
       </div>
     );

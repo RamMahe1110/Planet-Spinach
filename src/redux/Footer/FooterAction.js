@@ -9,3 +9,10 @@ export const setFooterDisplayToFalse = () => {
     type: "SET-DISPLAY-FALSE"
   };
 };
+
+export const changeFooterClass = data => {
+  return {
+    data,
+    type: "CHANGE-FOOTER-CLASS"
+  };
+};

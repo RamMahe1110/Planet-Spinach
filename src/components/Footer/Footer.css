@@ -1,4 +1,10 @@
 .footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.sub-footer {
   position: relative;
   height: 200px;
   background: #000;

@@ -21,7 +21,7 @@ class Homepage extends Component {
             Veggies are here to change your life.
             <span className="discount"> Get 20% off on all veggies</span>
           </h1>
-          <p>Checkout our Organic Vegetables</p>
+          <Link to="/category/5">Checkout our Organic Vegetables</Link>
         </div>
       </div>
     );

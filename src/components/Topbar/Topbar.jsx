@@ -16,10 +16,10 @@ class Topbar extends Component {
     return (
       <div className="topbar-whole">
         <div className="topbar">
-          <div className="logo">
+          <Link to="/" className="logo">
             <h5>PlanetSpinach</h5>
             <img src={require("../../assets/logos/leaf.png")} alt="logo" />
-          </div>
+          </Link>
           <div className="items">
             <Link to="/" className="item">
               Home

@@ -15,7 +15,8 @@
   border-bottom: 3px solid #39ff14;
 }
 
-h3 {
+.explore-btn {
+  cursor: pointer;
   border: 2px solid #fff;
   width: 13%;
   font-size: 1vw;
@@ -34,7 +35,7 @@ h3 {
     font-size: 5vw;
   }
 
-  h3 {
+  .explore-btn {
     width: 60%;
     font-size: 4vw;
     margin: 50px auto;

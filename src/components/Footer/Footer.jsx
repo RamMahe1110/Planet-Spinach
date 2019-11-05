@@ -1,15 +1,22 @@
 import React from "react";
+import { connect } from "react-redux";
 import "./Footer.css";
 
-const Footer = () => {
+const Footer = props => {
   return (
-    <div className="footer">
-      <div className="brand-hl">
-        <h2>PlanetSpinach</h2>
-        <img src={require("../../assets/logos/leaf.png")} alt="logo" />
+    <div className={`${props.FooterReducer.class}`}>
+      <div className="sub-footer">
+        <div className="brand-hl">
+          <h2>PlanetSpinach</h2>
+          <img src={require("../../assets/logos/leaf.png")} alt="logo" />
+        </div>
       </div>
     </div>
   );
 };
 
-export default Footer;
+const mapStateToProps = state => ({
+  FooterReducer: state.FooterReducer
+});
+
+export default connect(mapStateToProps)(Footer);

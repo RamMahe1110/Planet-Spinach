@@ -61,7 +61,7 @@
   transform: translate(-50%, -50%);
 }
 
-.middle-content p {
+.middle-content a {
   position: absolute;
   font-size: 1vw;
   width: 25%;
@@ -69,7 +69,6 @@
   left: 50%;
   margin: auto;
   color: #fff;
-
   background: rgb(30, 192, 0);
   color: #fff;
   padding: 20px;
@@ -111,7 +110,7 @@
     line-height: 30px;
   }
 
-  .middle-content p {
+  .middle-content a {
     width: 60%;
     font-size: 3vw;
   }
