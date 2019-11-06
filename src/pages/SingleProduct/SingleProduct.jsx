@@ -92,7 +92,7 @@ class SingleProduct extends Component {
                 Add To Basket
               </p>
             ) : currentUser.selectedProduct.quantity ? (
-              <p className="addToBasketBtn">Already in Cart</p>
+              <p className="addedToCart">Added to Cart</p>
             ) : (
               <p onClick={this.onAddToBasketClick} className="addToBasketBtn">
                 Add To Basket

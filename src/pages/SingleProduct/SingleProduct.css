@@ -46,7 +46,8 @@ a {
 }
 
 .addToBasketBtn,
-.checkoutBtn {
+.checkoutBtn,
+.addedToCart {
   cursor: pointer;
   position: absolute;
   top: 30%;
@@ -63,6 +64,11 @@ a {
 .checkoutBtn {
   top: 43%;
   background: #ff9f00;
+}
+
+.addedToCart {
+  background: #fff;
+  color: rgb(30, 192, 0);
 }
 
 .delivery {
