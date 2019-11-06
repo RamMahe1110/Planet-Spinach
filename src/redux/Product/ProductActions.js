@@ -41,12 +41,13 @@ export const onProductRequest = (productID, token) => dispatch => {
       `https://radiant-waters-84361.herokuapp.com/product/single/${productID}`,
       { token }
     )
-    .then(res =>
+    .then(res => {
+      console.log("annn", res.data);
       dispatch({
         type: "ON-SINGLE-PRODUCT-SELECT",
         data: res.data
-      })
-    );
+      });
+    });
 };
 
 export const setSingleProductToNull = () => ({

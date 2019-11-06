@@ -39,9 +39,10 @@ class SingleProduct extends Component {
     } else {
       const data = {
         token: currentUser.token,
-        productid: selectedProduct.id,
-        categoryid: selectedProduct.catId,
-        price: selectedProduct.price.amount
+        productid: selectedProduct.product.id,
+        categoryid: selectedProduct.product.catId,
+        price: selectedProduct.product.price.amount,
+        single: true
       };
       this.props.addProduct(data);
     }
@@ -51,10 +52,14 @@ class SingleProduct extends Component {
     const { currentUser } = this.props.UserReducer;
     const { selectedProduct } = this.props.ProductReducer;
 
+    console.log(selectedProduct, "checccc");
+
     if (selectedProduct === null) {
       return (
-        <div>
-          <Loader />
+        <div style={{ height: "75vh" }} className="all-cat-loader-ps">
+          <div className="all-cat-loader">
+            <Loader />
+          </div>
         </div>
       );
     }
@@ -66,7 +71,7 @@ class SingleProduct extends Component {
             <img
               className="main-img"
               src={selectedProduct.product.images[this.state.currentImg]}
-              alt={selectedProduct.product.name}
+              alt="product"
             />
             <div className="images-preview">
               {selectedProduct.product.images.map((img, i) => (
@@ -79,19 +84,21 @@ class SingleProduct extends Component {
                   src={img}
                   width="100px"
                   height="auto"
-                  alt={selectedProduct.product.name}
+                  alt="product"
                 />
               ))}
             </div>
           </div>
           <div className="order">
             <h2 className="pr-name">Product name is here</h2>
-            <h5 className="pr-price">$ {selectedProduct.price.amount}</h5>
+            <h5 className="pr-price">
+              $ {selectedProduct.product.price.amount}
+            </h5>
             {!currentUser ? (
               <p onClick={this.onAddToBasketClick} className="addToBasketBtn">
                 Add To Basket
               </p>
-            ) : currentUser.selectedProduct.quantity ? (
+            ) : selectedProduct.quantity ? (
               <p className="addedToCart">Added to Cart</p>
             ) : (
               <p onClick={this.onAddToBasketClick} className="addToBasketBtn">

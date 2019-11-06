@@ -17,10 +17,17 @@ export const addProduct = data => dispatch => {
   axios
     .post("https://radiant-waters-84361.herokuapp.com/basket/add/product", data)
     .then(res => {
-      dispatch({
-        type: "GET-USER-BASKET",
-        data: res.data
-      });
+      if (res.data.single) {
+        dispatch({
+          type: "ON-SINGLE-PRODUCT-SELECT",
+          data: res.data
+        });
+      } else {
+        dispatch({
+          type: "GET-USER-BASKET",
+          data: res.data
+        });
+      }
     });
 };
 
