@@ -35,10 +35,11 @@ export const setCategoryToNull = () => ({
   type: "SET-CATEGORY-TO-NULL"
 });
 
-export const onProductRequest = productID => dispatch => {
+export const onProductRequest = (productID, token) => dispatch => {
   axios
     .post(
-      `https://radiant-waters-84361.herokuapp.com/product/single/${productID}`
+      `https://radiant-waters-84361.herokuapp.com/product/single/${productID}`,
+      { token }
     )
     .then(res =>
       dispatch({

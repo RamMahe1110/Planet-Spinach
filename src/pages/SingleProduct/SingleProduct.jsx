@@ -20,7 +20,11 @@ class SingleProduct extends Component {
 
   componentDidMount() {
     const productID = this.props.match.params.productId;
-    this.props.onProductRequest(productID);
+    const { currentUser } = this.props.UserReducer;
+    this.props.onProductRequest(
+      productID,
+      currentUser ? currentUser.token : null
+    );
   }
 
   componentWillUnmount() {
