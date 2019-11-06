@@ -45,8 +45,10 @@ class SingleCategory extends Component {
 
     if (selectedCat === null) {
       return (
-        <div className="loader-sc">
-          <Loader />
+        <div style={{ height: "75vh" }} className="all-cat-loader-ps">
+          <div className="all-cat-loader">
+            <Loader />
+          </div>
         </div>
       );
     } else {

@@ -26,7 +26,13 @@ class HomePrdPreview extends Component {
     const { products } = this.props.ProductReducer;
 
     if (products === null) {
-      return <Loader />;
+      return (
+        <div className="all-cat-loader-ps">
+          <div className="all-cat-loader">
+            <Loader />
+          </div>
+        </div>
+      );
     }
 
     return (
