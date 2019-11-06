@@ -48,6 +48,7 @@ class SingleProduct extends Component {
   };
 
   render() {
+    const { currentUser } = this.props.UserReducer;
     const { selectedProduct } = this.props.ProductReducer;
 
     if (selectedProduct === null) {
@@ -86,9 +87,17 @@ class SingleProduct extends Component {
           <div className="order">
             <h2 className="pr-name">Product name is here</h2>
             <h5 className="pr-price">$ {selectedProduct.price.amount}</h5>
-            <p onClick={this.onAddToBasketClick} className="addToBasketBtn">
-              Add To Basket
-            </p>
+            {!currentUser ? (
+              <p onClick={this.onAddToBasketClick} className="addToBasketBtn">
+                Add To Basket
+              </p>
+            ) : currentUser.selectedProduct.quantity ? (
+              <p className="addToBasketBtn">Already in Cart</p>
+            ) : (
+              <p onClick={this.onAddToBasketClick} className="addToBasketBtn">
+                Add To Basket
+              </p>
+            )}
             <Link to="/userbasket">
               <p className="checkoutBtn">Checkout Basket</p>
             </Link>
