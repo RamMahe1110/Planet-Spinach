@@ -65,11 +65,11 @@ class SingleProduct extends Component {
           <div className="img">
             <img
               className="main-img"
-              src={selectedProduct.images[this.state.currentImg]}
-              alt={selectedProduct.name}
+              src={selectedProduct.product.images[this.state.currentImg]}
+              alt={selectedProduct.product.name}
             />
             <div className="images-preview">
-              {selectedProduct.images.map((img, i) => (
+              {selectedProduct.product.images.map((img, i) => (
                 <img
                   onClick={() => this.onImageClick(i)}
                   className={`small-img ${
@@ -79,7 +79,7 @@ class SingleProduct extends Component {
                   src={img}
                   width="100px"
                   height="auto"
-                  alt={selectedProduct.name}
+                  alt={selectedProduct.product.name}
                 />
               ))}
             </div>
