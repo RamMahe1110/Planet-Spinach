@@ -123,7 +123,7 @@
   }
 
   .small-dis-head {
-    display: inline;
+    display: initial;
     position: absolute;
     top: 55%;
     left: 50%;
