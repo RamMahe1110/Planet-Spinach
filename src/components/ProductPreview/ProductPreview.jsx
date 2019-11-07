@@ -11,9 +11,9 @@ const ProductPreview = ({ product, catID, productID, history }) => {
       <img src={product.images[0]} alt={product.name} />
       <p style={{ padding: "10px", color: "grey" }}>{product.name}</p>
       <p className="add-to-basket">View Product</p>
-      <p className="price">
+      {/* <p className="price">
         ${product.price.amount}/{product.price.unit}
-      </p>
+      </p> */}
     </div>
   );
 };

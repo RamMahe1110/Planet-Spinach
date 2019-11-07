@@ -4,7 +4,7 @@
   padding: 10px;
   border-radius: 10px;
   width: 350px;
-  height: 49vh;
+
   margin: 20px auto;
   -moz-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
   -webkit-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
@@ -70,7 +70,6 @@
     width: 350px;
     padding: 10px;
     margin: 20px auto;
-    height: 62vh;
   }
 
   .product-preview img {
@@ -84,7 +83,6 @@
     width: 320px;
     padding: 10px;
     margin: 20px auto;
-    height: 52vh;
   }
 
   .product-preview img {
@@ -94,5 +92,13 @@
 
   .price {
     top: 68%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .product-preview {
+    width: 280px;
+    padding: 10px;
+    margin: 20px auto;
   }
 }
