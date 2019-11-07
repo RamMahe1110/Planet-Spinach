@@ -33,7 +33,19 @@ a {
 
 @media screen and (max-width: 700px) {
   .limited-container .cat-name {
-    width: 60%;
+    width: 350px;
     margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .limited-container .cat-name {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .limited-container .cat-name {
+    width: 280px;
   }
 }
