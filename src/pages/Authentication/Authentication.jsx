@@ -1,18 +1,21 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Route } from "react-router-dom";
-import { changeFooterClass } from "./../../redux/Footer/FooterAction";
+import {
+  setFooterDisplayToTrue,
+  setFooterDisplayToFalse
+} from "./../../redux/Footer/FooterAction";
 import SignUp from "./../../components/SignUp/SignUp";
 import Login from "./../../components/Login/Login";
 import "./Authentication.css";
 
 class Authentication extends Component {
   componentDidMount() {
-    this.props.changeFooterClass("footer");
+    this.props.setFooterDisplayToFalse();
   }
 
   componentWillUnmount() {
-    this.props.changeFooterClass(null);
+    this.props.setFooterDisplayToTrue();
   }
 
   render() {
@@ -27,5 +30,5 @@ class Authentication extends Component {
 
 export default connect(
   null,
-  { changeFooterClass }
+  { setFooterDisplayToTrue, setFooterDisplayToFalse }
 )(Authentication);
