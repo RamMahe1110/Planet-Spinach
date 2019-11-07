@@ -19,7 +19,6 @@ class Homepage extends Component {
         <div className="middle-content">
           <h1>
             <span className="hider">
-              {" "}
               Veggies are here to change your life.{" "}
             </span>
             <span className="discount"> Get 20% off on all veggies</span>

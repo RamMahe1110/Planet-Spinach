@@ -93,6 +93,10 @@
 }
 
 @media screen and (max-width: 700px) {
+  .middle-content {
+    height: 600px;
+  }
+
   .top-content h1 {
     width: 100%;
     font-size: 5vw;
@@ -122,5 +126,16 @@
     width: 60%;
     font-size: 3vw;
     top: 52%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .middle-content {
+    height: 600px;
+  }
+
+  .middle-content a {
+    width: 70%;
+    top: 55%;
   }
 }
