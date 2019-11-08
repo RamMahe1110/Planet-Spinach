@@ -12,7 +12,7 @@ import "./HomePrdPreview.css";
 class HomePrdPreview extends Component {
   componentDidMount() {
     const data = {
-      categories: ["Healthy Carbs", "Animal Products", "Plant Protein"],
+      categories: ["Healthy Carbs", "Natural Sweetners", "Plant Protein"],
       limit: 4
     };
     this.props.getLimitedProducts(data);
