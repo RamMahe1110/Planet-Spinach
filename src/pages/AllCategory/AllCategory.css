@@ -68,6 +68,7 @@
   border-radius: 5px;
   margin: 0;
   cursor: pointer;
+  color: rgb(109, 109, 109);
 }
 
 .category-item .category-title {
@@ -76,7 +77,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  color: rgb(109, 109, 109);
+  color: inherit;
   font-size: 2vw;
   z-index: 2;
 }
