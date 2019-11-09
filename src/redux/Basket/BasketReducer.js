@@ -1,5 +1,6 @@
 const initialState = {
-  userBasket: null
+  userBasket: null,
+  total: null
 };
 
 const BasketReducer = (state = initialState, action) => {
@@ -7,18 +8,21 @@ const BasketReducer = (state = initialState, action) => {
     case "GET-USER-BASKET":
       return {
         ...state,
-        userBasket: action.data
+        userBasket: action.data.records,
+        total: action.data.total
       };
     case "SET-BASKET-TO-NULL":
       return {
         ...state,
-        userBasket: null
+        userBasket: null,
+        total: null
       };
 
     case "ON-USER-LOGOUT":
       return {
         ...state,
-        userBasket: null
+        userBasket: null,
+        total: null
       };
 
     default:

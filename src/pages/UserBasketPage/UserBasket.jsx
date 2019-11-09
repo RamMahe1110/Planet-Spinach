@@ -45,7 +45,7 @@ class UserBasket extends Component {
 
   render() {
     const { currentUser } = this.props.UserReducer;
-    const { userBasket } = this.props.BasketReducer;
+    const { userBasket, total } = this.props.BasketReducer;
 
     if (!currentUser) {
       return (
@@ -102,7 +102,7 @@ class UserBasket extends Component {
           )}
         </div>
         <div className="bill">
-          <p className="total">Total: $69.69</p>
+          <p className="total">Total: ${total}</p>
           <p className="payment">Pay</p>
         </div>
       </div>
