@@ -19,6 +19,7 @@ class SingleProduct extends Component {
   };
 
   componentDidMount() {
+    window.scroll(0, 0);
     const productID = this.props.match.params.productId;
     const { currentUser } = this.props.UserReducer;
     this.props.onProductRequest(
