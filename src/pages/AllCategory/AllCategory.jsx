@@ -10,6 +10,7 @@ import "./AllCategory.css";
 
 class AllCategory extends Component {
   componentDidMount() {
+    window.scroll(0, 0);
     this.props.getAllCategoryList();
   }
 
