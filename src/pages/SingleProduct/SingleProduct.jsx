@@ -90,7 +90,7 @@ class SingleProduct extends Component {
             </div>
           </div>
           <div className="order">
-            <h2 className="pr-name">Product name is here</h2>
+            <h2 className="pr-name">{selectedProduct.product.name}</h2>
             <h5 className="pr-price">
               $ {selectedProduct.product.price.amount}
             </h5>

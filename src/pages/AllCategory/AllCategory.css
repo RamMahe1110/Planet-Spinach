@@ -114,7 +114,7 @@
 @media screen and (max-width: 700px) {
   .top-content-all-cat h2 {
     width: 100%;
-    font-size: 5vw;
+    font-size: 6vw;
     line-height: 45px;
     top: 45%;
   }
@@ -129,7 +129,7 @@
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 5vw;
+    font-size: 6vw;
     z-index: 1;
     color: rgb(30, 192, 0);
     width: 100%;
@@ -148,5 +148,9 @@
 @media screen and (max-width: 500px) {
   .top-content-all-cat h2 {
     line-height: 35px;
+  }
+
+  .small-dis-head {
+    margin-top: 7px;
   }
 }
