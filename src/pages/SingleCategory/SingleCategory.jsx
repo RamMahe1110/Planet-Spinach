@@ -17,12 +17,14 @@ class SingleCategory extends Component {
   componentDidMount() {
     const { currPage, limit } = this.state;
     const { categoryId } = this.props.match.params;
+    window.scroll(0, 0);
     this.props.onCategoryRequest(categoryId, currPage, limit);
   }
 
   onNextButtonClick = () => {
     const { currPage, limit } = this.state;
     const { categoryId } = this.props.match.params;
+    window.scroll(0, 0);
     this.props.onCategoryRequest(categoryId, currPage + 1, limit);
     this.setState({ currPage: currPage + 1 });
   };
@@ -30,6 +32,7 @@ class SingleCategory extends Component {
   onPrevButtonClick = () => {
     const { currPage, limit } = this.state;
     const { categoryId } = this.props.match.params;
+    window.scroll(0, 0);
     this.props.onCategoryRequest(categoryId, currPage - 1, limit);
     this.setState({ currPage: currPage - 1 });
   };
