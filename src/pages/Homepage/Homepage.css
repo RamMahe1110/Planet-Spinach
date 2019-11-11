@@ -102,6 +102,15 @@
     width: 20%;
     top: 53%;
   }
+  .middle-content h1 {
+    width: 100%;
+    font-size: 3vw;
+  }
+
+  .middle-content a {
+    font-size: 2vw;
+    width: 40%;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -142,7 +151,7 @@
   .middle-content a {
     width: 60%;
     font-size: 3vw;
-    top: 52%;
+    top: 58%;
     padding: 15px;
   }
 }
