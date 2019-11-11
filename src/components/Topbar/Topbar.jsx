@@ -73,13 +73,19 @@ class Topbar extends Component {
             >
               Category
             </Link>
-            <Link
-              onClick={this.onDropdownClick}
-              to="/auth/login"
-              className="res-link"
-            >
-              Login
-            </Link>
+            {currentUser === null ? (
+              <Link
+                onClick={this.onDropdownClick}
+                to="/auth/login"
+                className="res-link"
+              >
+                Login
+              </Link>
+            ) : (
+              <p className="res-link" onClick={this.onLogoutClick}>
+                Logout
+              </p>
+            )}
             <Link
               onClick={this.onDropdownClick}
               to="/userbasket"
