@@ -92,14 +92,31 @@
   box-shadow: inset 0 0 200px rgba(0, 0, 0);
 }
 
-@media screen and (max-width: 700px) {
-  .middle-content {
-    height: 600px;
+@media screen and (max-width: 1200px) {
+  .top-content h1 {
+    width: 100%;
+    font-size: 4vw;
   }
 
+  .top-content p {
+    width: 20%;
+    top: 53%;
+  }
+}
+
+@media screen and (max-width: 700px) {
   .top-content h1 {
     width: 100%;
     font-size: 5vw;
+  }
+
+  .top-content p {
+    width: 35%;
+    top: 53%;
+  }
+
+  .middle-content {
+    height: 600px;
   }
 
   .top-content p {
