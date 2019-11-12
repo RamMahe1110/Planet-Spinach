@@ -6,20 +6,24 @@
 }
 
 .single-category h1 {
+  position: fixed;
   cursor: pointer;
-  margin: 30px auto 50px auto;
+  margin: 0px auto 50px auto;
   padding: 10px;
   color: rgb(30, 192, 0);
-  width: 18%;
+  width: 100%;
   text-align: center;
   font-size: 1vw;
   border-radius: 5px;
   -moz-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
   -webkit-box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
   box-shadow: 0 0 5px rgba(32, 33, 36, 0.28);
+  z-index: 1;
+  background: #fff;
 }
 
 .single-category .all-products {
+  padding-top: 100px;
   display: grid;
   grid-gap: 0px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -83,7 +87,6 @@
   }
 
   .single-category h1 {
-    width: 80%;
     font-size: 5vw;
   }
 
