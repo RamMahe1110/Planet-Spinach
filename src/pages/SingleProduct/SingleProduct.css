@@ -196,7 +196,8 @@ a {
   }
 
   .addToBasketBtn,
-  .checkoutBtn {
+  .checkoutBtn,
+  .addedToCart {
     position: static;
     margin: 20px auto;
     width: 90%;

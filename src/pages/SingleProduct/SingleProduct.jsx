@@ -173,7 +173,8 @@ const mapStateToProps = state => ({
   UserReducer: state.UserReducer
 });
 
-export default connect(
-  mapStateToProps,
-  { onProductRequest, setSingleProductToNull, addProduct }
-)(SingleProduct);
+export default connect(mapStateToProps, {
+  onProductRequest,
+  setSingleProductToNull,
+  addProduct
+})(SingleProduct);
