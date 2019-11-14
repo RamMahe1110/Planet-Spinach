@@ -22,7 +22,7 @@ class AllCategory extends Component {
     const { allCatList } = this.props.ProductReducer;
     return (
       <div className="all-category">
-        <div className="top-content-all-cat">
+        <div className="top-content-all-cat personal">
           <h2 className="large-dis">
             Select from our wide range of
             <span className="highlighted"> healthy food categories</span>
@@ -58,7 +58,7 @@ const mapStateToProps = state => ({
   ProductReducer: state.ProductReducer
 });
 
-export default connect(
-  mapStateToProps,
-  { getAllCategoryList, setAllCatToNull }
-)(AllCategory);
+export default connect(mapStateToProps, {
+  getAllCategoryList,
+  setAllCatToNull
+})(AllCategory);
