@@ -22,7 +22,7 @@ class AllCategory extends Component {
     const { allCatList } = this.props.ProductReducer;
     return (
       <div className="all-category">
-        <div className="top-content-all-cat personal">
+        <div className="top-content-all-cat">
           <h2 className="large-dis">
             Select from our wide range of
             <span className="highlighted"> healthy food categories</span>
